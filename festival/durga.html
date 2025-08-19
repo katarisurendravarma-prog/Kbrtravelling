@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Durga Puja & Sundarbans | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff3e0, #ffffff);
+      color: #3e2723;
+    }
+
+    header {
+      background: linear-gradient(to right, #e65100, #ff9800);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #bf360c;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #e65100;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #fff8e1;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(255, 152, 0, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #f57c00;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #e65100;
+    }
+
+    footer {
+      background: #e65100;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Durga Puja & Sundarbans Tour</h1>
+  <p>Festivity meets wilderness in Eastern India’s most vibrant journey</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Celebrate <strong>Durga Puja in Kolkata</strong> with pandal-hopping and cultural immersion, followed by a relaxing <strong>wildlife cruise</strong> through the <strong>Sundarbans</strong>, home of the Royal Bengal Tiger.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>📍 Destinations Covered</h2>
+  <p>Kolkata – Sundarbans – Kolkata</p>
+
+  <h2>🗓️ Duration</h2>
+  <p>8 Days / 7 Nights</p>
+
+  <h2>🎉 Overview</h2>
+  <p>Durga Puja in Kolkata is India’s grandest celebration of culture and devotion. This tour combines its colorful festivities with the serene wilderness of the Sundarbans mangroves, offering a unique travel blend of culture and nature.</p>
+
+  <h2>📝 Detailed Itinerary</h2>
+
+  <h4>Day 1: Arrive Kolkata</h4>
+  <p>Arrival and check-in. Evening at leisure or explore local markets and bookshops.</p>
+
+  <h4>Day 2: Kolkata</h4>
+  <p>Visit Victoria Memorial, St. Paul’s Cathedral. Optional: Food tour or Ganga Aarti.</p>
+
+  <h4>Day 3: North Kolkata Pandals</h4>
+  <p>Explore iconic themed Durga Puja pandals across old Kolkata neighborhoods.</p>
+
+  <h4>Day 4: South Kolkata Pandals</h4>
+  <p>Celebrate Mahanavami with a guided city tour of South Kolkata’s elaborate puja installations.</p>
+
+  <h4>Day 5: Sindur Khela & Immersion</h4>
+  <p>Witness the emotional conclusion of the festival with Sindur Khela and idol immersion on the Hooghly River.</p>
+
+  <h4>Day 6: Kolkata – Sundarbans</h4>
+  <p>Drive to Gothkhali Jetty, cruise to Sunderban Tiger Camp. Evening village walk.</p>
+
+  <h4>Day 7: Sundarbans</h4>
+  <p>Wildlife cruise to Dobanke Watch Tower, canopy walk, and cultural show in the evening.</p>
+
+  <h4>Day 8: Sundarbans – Kolkata</h4>
+  <p>Morning cruise to Sudhanyakhali Watch Tower. Return to Kolkata after lunch.</p>
+
+
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">A vibrant celebration followed by a tranquil escape – the perfect Eastern India experience</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Celebrating Culture & Nature with Heart 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

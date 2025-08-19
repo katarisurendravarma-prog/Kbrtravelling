@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manali | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f0f9ff, #e0f2fe);
+      color: #1e3a8a;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #1e40af, #3b82f6);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1e40af;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    ul li {
+      background: #dbeafe;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #3b82f6;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    }
+
+    .highlight {
+      background: #eff6ff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    footer {
+      background: #dbeafe;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      ul li { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Escape to the Hills of Manali</h1>
+    <p>Snowy peaks, adventurous trails, and soulful charm await you in Himachal’s gem</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🏔️ Overview of Manali</h2>
+    <p>Manali, nestled in Himachal Pradesh, is a favorite all-season destination offering breathtaking landscapes, cozy cafes, thrilling adventure sports, and a rich mix of cultures. Whether you seek snow, solitude, or a scenic escape—Manali has it all.</p>
+
+    <div class="highlight fade-up">
+      <h2>✨ Why Visit Manali?</h2>
+      <p>From skiing in Solang Valley to soaking in Vashisht hot springs, Manali is the perfect mountain getaway with activities for honeymooners, families, backpackers, and thrill-seekers alike.</p>
+    </div>
+
+    <h2 class="fade-up">📸 Best Places to Visit</h2>
+    <ul class="fade-up">
+      <li>Hadimba Temple – Surrounded by cedar forests, with distinct wooden architecture</li>
+      <li>Solang Valley – Adventure hub for skiing, paragliding, and more</li>
+      <li>Rohtang Pass – Breathtaking views, open seasonally May–Nov</li>
+      <li>Old Manali – Rustic charm, lively cafes, art, and shopping</li>
+      <li>Manu Temple – Dedicated to sage Manu with tranquil mountain ambiance</li>
+    </ul>
+
+    <h2 class="fade-up">⛅ Best Time to Visit</h2>
+    <p class="fade-up">
+      <strong>Summer (Mar–Jun):</strong> Ideal for sightseeing, river rafting, and paragliding<br/>
+      <strong>Monsoon (Jul–Sep):</strong> Lush landscapes, but landslide-prone<br/>
+      <strong>Winter (Oct–Feb):</strong> Snowy delight with skiing and romantic vibes
+    </p>
+
+    <h2 class="fade-up">🎊 Festivals to Experience</h2>
+    <ul class="fade-up">
+      <li>Winter Carnival – Culture, dance, and skiing contests (January)</li>
+      <li>Dussehra – Traditional celebrations in nearby Kullu (October)</li>
+      <li>Hadimba Devi Fair – Local rituals and music (May)</li>
+    </ul>
+
+    <h2 class="fade-up">🎒 Things to Do in Manali</h2>
+    <ul class="fade-up">
+      <li>Rafting in Beas River</li>
+      <li>Trek to Jogini Falls</li>
+      <li>Soak in Vashisht Hot Springs</li>
+      <li>Explore Naggar Castle</li>
+      <li>Shop and chill in Old Manali</li>
+    </ul>
+
+    <h2 class="fade-up">🛬 How to Reach Manali</h2>
+    <p class="fade-up">
+      <strong>By Air:</strong> Bhuntar Airport (50 km); connected via taxis<br/>
+      <strong>By Train:</strong> Joginder Nagar (145 km) or Chandigarh for wider access<br/>
+      <strong>By Road:</strong> Regular buses/taxis from Delhi, Chandigarh, Shimla; scenic self-drive route
+    </p>
+
+    <h2 class="fade-up">📍 Places to Visit Nearby</h2>
+    <ul class="fade-up">
+      <li>Solang Valley – Adventure playground</li>
+      <li>Rohtang Pass – Iconic snow-filled pass</li>
+      <li>Naggar Castle – Historic fort and art gallery</li>
+      <li>Kullu – River rafting, temples, and handicrafts</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Experience snowy serenity and adventure in Manali ❄️⛰️
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

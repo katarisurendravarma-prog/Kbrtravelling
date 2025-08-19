@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Khyber Himalayan Resort & Spa | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+      color: #263238;
+    }
+
+    header {
+      background: linear-gradient(to right, #37474f, #607d8b);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #37474f;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #e3f2fd;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    footer {
+      background: #37474f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Khyber Himalayan Resort & Spa</h1>
+  <p>India's only boutique luxury ski-resort in the heart of Gulmarg</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Nestled in a dense pine forest across <strong>7 acres</strong>, The Khyber offers stunning views, five-star comfort, and unforgettable alpine adventures. From skiing to stargazing, every stay is rich in Himalayan magic.</p>
+  </div>
+
+  <h2>🏔️ Location</h2>
+  <p>Gulmarg, Kashmir – Just steps away from the world-renowned Gulmarg Gondola</p>
+
+  <h2>🏨 Property Highlights</h2>
+  <ul>
+    <li>85 elegantly designed rooms and cottages</li>
+    <li>Signature Khyber Spa by L’Occitane</li>
+    <li>Heated indoor swimming pool with panoramic views</li>
+    <li>Multiple gourmet dining options</li>
+    <li>Indoor games, cigar lounge, and fitness centre</li>
+  </ul>
+
+  <h2>❄️ Seasonal Experiences</h2>
+  <p><strong>Winter:</strong> Ski Asia’s finest powder slopes, enjoy après-ski by the fire, or ride the Gondola to Apharwat Peak.</p>
+  <p><strong>Spring & Summer:</strong> Trek wildflower meadows, picnic in pine forests, or tee off at the world’s highest golf course.</p>
+
+  <h2>🌿 Eco-Luxury</h2>
+  <p>Built with local wood and stone, the resort reflects Kashmiri heritage while minimizing its footprint. The interiors are inspired by Himalayan art, nature, and warm mountain hospitality.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Whether you're chasing snow or serenity, The Khyber offers a Himalayan escape like no other.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted Luxury in the Himalayas ❄️
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

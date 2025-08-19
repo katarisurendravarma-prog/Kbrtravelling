@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnoustie Ayurveda & Wellness | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+      color: #004d40;
+    }
+
+    header {
+      background: linear-gradient(to right, #00796b, #26a69a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #00695c;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #00796b;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #e0f7fa;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 150, 136, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #00897b;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #00695c;
+    }
+
+    footer {
+      background: #00796b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Carnoustie Ayurveda & Wellness</h1>
+  <p>A Sanctuary of Wellness by the Sea</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Set on the tranquil <strong>Marari Beach</strong>, Carnoustie blends <strong>Balinese-inspired design</strong> with Kerala’s <strong>Ayurvedic healing</strong> traditions, offering luxurious villas, holistic wellness, and nature’s embrace in one serene experience.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>🏝️ Location</h2>
+  <p>Mararikulam, Kerala – nestled on the Malabar Coast</p>
+
+  <h2>🌿 What Makes It Special</h2>
+  <ul>
+    <li>40 eco-luxury villas and traditional backwater suites</li>
+    <li>Award-winning Ayurveda & wellness spa therapies</li>
+    <li>Organic cuisine tailored to your body type (dosha)</li>
+    <li>Private houseboat sail experiences</li>
+    <li>Cultural performances and temple rituals</li>
+    <li>Sustainable construction with bamboo, jute & reclaimed wood</li>
+  </ul>
+
+  <h2>🧘 Experiences Offered</h2>
+  <ul>
+    <li>Personalized Ayurvedic consultations & detox programs</li>
+    <li>Sunrise yoga sessions</li>
+    <li>Traditional Kerala massage and herbal therapies</li>
+    <li>Cycling through coconut groves and fishing villages</li>
+    <li>Backwater cruises and birdwatching tours</li>
+  </ul>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Wellness is not just a treatment here, it’s a way of life 🌺</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Retreat into Wellness with Heart 🌿
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

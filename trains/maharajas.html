@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maharajas' Express | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f3e5f5, #ffffff);
+      color: #4a148c;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a1b9a, #ab47bc);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6a1b9a;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #8e24aa;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #f8eaf6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(171, 71, 188, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #8e24aa;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #6a1b9a;
+    }
+
+    footer {
+      background: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Maharajas' Express</h1>
+  <p>The Ultimate Royal Journey Across India</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Step aboard the <strong>Maharajas' Express</strong> and explore India's most iconic destinations in absolute luxury. Awarded the “World’s Leading Luxury Train” multiple times, it offers a regal experience like no other.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>🚆 A Palace on Rails</h2>
+  <p>With opulent interiors, personalized hospitality, fine dining, and curated heritage excursions, the Maharajas’ Express recreates the grandeur of royal travel from India’s golden era.</p>
+
+  <h2>📜 About the Train</h2>
+  <p>Launched in 2010 by <strong>IRCTC</strong>, the Maharajas’ Express was designed to reflect the extravagant lifestyle of India’s royalty. The train features themed suites, observation lounges, and bars to ensure an unforgettable journey through India’s cultural heartland.</p>
+
+  <h2>🏆 Global Recognition</h2>
+  <p>This majestic train has consistently earned accolades as the “<strong>World’s Leading Luxury Train</strong>,” making it a favorite among elite travelers and cultural explorers worldwide.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Relive royal grandeur as you glide through India's timeless treasures</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Discover India in Royal Style 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

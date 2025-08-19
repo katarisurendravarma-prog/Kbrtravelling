@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deccan Odyssey | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f3e5f5, #ffffff);
+      color: #4a148c;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a1b9a, #ab47bc);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6a1b9a;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #8e24aa;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #fce4ec;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(156, 39, 176, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #8e24aa;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #6a1b9a;
+    }
+
+    footer {
+      background: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Deccan Odyssey Luxury Train</h1>
+  <p>Explore India’s West and South in Royal Comfort</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Step aboard the <strong>Deccan Odyssey</strong>, a luxury train designed like a regal palace, and journey across India’s western and southern frontiers with unmatched comfort. With opulent interiors, curated excursions, and five-star service, this royal train ride is more than just travel — it's an unforgettable experience.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>🚆 The Royal Journey Begins</h2>
+  <p>Launched in 2004 by the Maharashtra Tourism Development Corporation (MTDC) in collaboration with Indian Railways, the Deccan Odyssey was envisioned as a cultural and heritage showcase for the Deccan region. It combines the allure of ancient traditions with modern hospitality on wheels.</p>
+
+  <h2>📍 Destinations Covered</h2>
+  <p>Choose from multiple routes across Maharashtra, Goa, Karnataka, and beyond — including Ajanta & Ellora Caves, Udaipur, Hampi, Sindhudurg, Hyderabad, and more.</p>
+
+  <h2>🛏️ Onboard Luxury</h2>
+  <p>Enjoy lavish cabins, gourmet dining, an onboard spa, and personalized service as you travel in the footsteps of kings and sultans.</p>
+
+  <h2>🎟️ Why Choose Deccan Odyssey?</h2>
+  <ul>
+    <li>Heritage tours with expert guides</li>
+    <li>Luxury amenities and impeccable service</li>
+    <li>Immersive local experiences at each stop</li>
+    <li>Awards: Asia’s Leading Luxury Train multiple times</li>
+  </ul>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Travel like royalty. Discover India’s soul — one station at a time.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted for the Curious Royal Explorer 🚆
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

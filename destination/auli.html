@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auli | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f0fdfa, #ecfeff);
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #0ea5e9, #38bdf8);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #0284c7;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    ul li {
+      background: #cffafe;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #0ea5e9;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+    }
+
+    .highlight {
+      background: #ecfeff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.1);
+    }
+
+    footer {
+      background: #cffafe;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Adventure and Serenity in Auli</h1>
+    <p>The Skiing Capital of India in the heart of the Garhwal Himalayas</p>
+  </header>
+
+  <!-- Auli Section -->
+  <section id="auli" class="fade-up">
+    <h2>🏔️ Nature's Playground in Uttarakhand</h2>
+    <p>Auli, nestled in the Chamoli district of Uttarakhand, is a pristine hill town offering breathtaking meadows, snow-covered peaks, and alpine charm. Whether you’re a skier, trekker, or honeymooner, Auli has something for every nature lover and thrill seeker.</p>
+
+    <div class="highlight fade-up">
+      <h2>❄️ Why Visit Auli?</h2>
+      <p>With views of Nanda Devi and Mana Parvat, Auli transforms into a snowy paradise in winter and a lush haven in summer. From skiing adventures to peaceful getaways, it remains a perfect blend of excitement and serenity.</p>
+    </div>
+
+    <h2 class="fade-up">📍 Top Places to Visit in Auli</h2>
+    <ul class="fade-up">
+      <li>Auli Artificial Lake – High-altitude beauty and snow-making hub</li>
+      <li>Gurso Bugyal – Trek through alpine meadows with mountain views</li>
+      <li>Joshimath – Sacred winter home of Lord Badrinath</li>
+      <li>Kwani Bugyal – Popular trek offering views of Dunagiri & Nanda Devi</li>
+      <li>Auli Ropeway – One of India’s highest and longest cable rides</li>
+    </ul>
+
+    <h2 class="fade-up">🎒 Things to Do in Auli</h2>
+    <ul class="fade-up">
+      <li>Go skiing on powdery slopes from Dec to Feb</li>
+      <li>Ride the Joshimath-Auli cable car for sweeping Himalayan views</li>
+      <li>Trek to Gurso Bugyal for lush meadows and crisp mountain air</li>
+      <li>Camp under the stars with views of snow-laced peaks</li>
+      <li>Relax and photograph the scenic Auli Lake</li>
+    </ul>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">
+      <strong>Winter (Dec–Feb):</strong> Best for skiing (-4°C to 7°C)<br/>
+      <strong>Summer (Mar–Jun):</strong> Pleasant for sightseeing & trekking (10°C to 20°C)<br/>
+      <strong>Monsoon (Jul–Sep):</strong> Rainy and risky, but crowd-free<br/>
+      <strong>Autumn (Oct–Nov):</strong> Ideal for clear skies and photography
+    </p>
+
+    <h2 class="fade-up">🎉 Festivals & Events</h2>
+    <ul class="fade-up">
+      <li>Auli Winter Carnival – Ski tournaments & folk festivities</li>
+      <li>Ganga Dussehra – Celebrated with devotion in nearby Joshimath</li>
+    </ul>
+
+    <h2 class="fade-up">🛤️ How to Reach Auli</h2>
+    <p class="fade-up">
+      <strong>By Air:</strong> Jolly Grant Airport (Dehradun) – 270 km. Taxi to Joshimath + cable car/drive<br/>
+      <strong>By Train:</strong> Haridwar Railway Station (273 km). Taxis or buses to Joshimath<br/>
+      <strong>By Road:</strong> Regular buses & taxis connect Dehradun, Rishikesh, Haridwar to Joshimath
+    </p>
+
+    <h2 class="fade-up">🌄 Places Near Auli</h2>
+    <ul class="fade-up">
+      <li>Joshimath (16 km) – Temples & trek routes</li>
+      <li>Valley of Flowers – Accessible in monsoon, UNESCO Site</li>
+      <li>Badrinath (60 km) – Sacred Char Dham site</li>
+      <li>Hemkund Sahib – Sikh pilgrimage spot in summer</li>
+      <li>Tapovan – Famous for hot springs & mountain scenery</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 KBR Travel | Discover India, One Peak at a Time 🏞️
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

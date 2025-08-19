@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ladakh Tour | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: linear-gradient(to bottom, #f6f9fc, #e1eff4); color: #333; }
+
+    header {
+      background: linear-gradient(to right, #283c86, #45a247);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #283c86;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      color: #2f5e5e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #e3f5f1;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #45a247;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #378a3c;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ladakh Adventure Tour</h1>
+  <p>Journey through the Land of High Passes and Sacred Monasteries</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Destinations:</strong> Delhi – Leh – Khardung La – Nubra Valley – Panamic – Leh</p>
+    <p><strong>Duration:</strong> 08 Days / 07 Nights</p>
+    <p><strong>Best Time to Visit:</strong> June to August</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📝 Ladakh Tour Itinerary</h2>
+
+  <h4>Day 1: Arrive in Delhi</h4>
+  <p>Meet and greet on arrival. Transfer to your hotel. Overnight in Delhi.</p>
+
+  <h4>Day 2: Delhi to Leh (Flight)</h4>
+  <p>Fly to Leh and acclimatize to the high altitude. Rest and relax for the day.</p>
+
+  <h4>Day 3: Indus Valley Monasteries</h4>
+  <p>Visit Shey Palace, Thiksey Monastery, and Hemis Monastery in the Indus Valley.</p>
+
+  <h4>Day 4: Leh to Nubra Valley via Khardung La</h4>
+  <p>Drive over Khardung La Pass, the world's highest motorable road. Explore the Nubra Valley and stay overnight.</p>
+
+  <h4>Day 5: Nubra to Panamic & Return to Leh</h4>
+  <p>Visit Panamic village known for its hot springs and scenic landscapes. Return to Leh by evening.</p>
+
+  <h4>Day 6: Leh to Lamayuru & Alchi</h4>
+  <p>Drive to Lamayuru Monastery and visit the moonland landscapes. Continue to Alchi village.</p>
+
+  <h4>Day 7: Alchi to Leh</h4>
+  <p>Visit Alchi Monastery and return to Leh. Enjoy a traditional Ladakhi dance performance in the evening.</p>
+
+  <h4>Day 8: Fly Leh to Delhi</h4>
+  <p>Transfer to airport for flight back to Delhi and onward journey.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">
+    “Breathe in the silence of the mountains, and capture Ladakh through your lens and soul.”
+  </p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted for Himalayan Explorers ⛰️
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

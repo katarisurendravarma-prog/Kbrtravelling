@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assam & Sundarbans | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #1b5e20, #4caf50);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1b5e20;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #2e7d32;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #f1f8e9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #388e3c;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #1b5e20;
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Assam & Sundarbans Cruise Tour</h1>
+  <p>Wildlife, culture, and river adventure across northeast India</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>This 15-day immersive journey explores the breathtaking <strong>Assamese countryside</strong>, <strong>tribal heritage</strong>, and the mystical <strong>Sundarbans mangrove forests</strong> through guided tours, safaris, and a luxury cruise experience.</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📍 Destinations Covered</h2>
+  <p>Kolkata – Jorhat – Majuli – Kaziranga – Tezpur – Barpeta – Manas – Guwahati – Kolkata (via Sundarbans Cruise)</p>
+
+  <h2>🗓️ Duration</h2>
+  <p>15 Days / 14 Nights</p>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>October to April</p>
+
+  <h2>🌿 Overview</h2>
+  <p>From tribal monasteries of Majuli and rhino safaris in Kaziranga, to tiger spotting in Manas and river cruising through the Sundarbans, this journey is packed with unforgettable adventures.</p>
+
+  <h2>📝 Detailed Itinerary</h2>
+
+  <h4>Day 1–2: Arrival & Explore Kolkata</h4>
+  <p>Visit Flower Market, ferry to artist quarters, Victoria Memorial, and College Street.</p>
+
+  <h4>Day 3–4: Fly to Jorhat – Ferry to Majuli Island</h4>
+  <p>Explore Satra monasteries, pottery villages, and tribal communities.</p>
+
+  <h4>Day 5–6: Drive to Kaziranga & Wildlife Safaris</h4>
+  <p>Experience elephant rides and jeep safaris in the UNESCO-listed park.</p>
+
+  <h4>Day 7–8: Manas National Park</h4>
+  <p>Tiger reserve exploration and visit to Bodo tribal village with cultural show.</p>
+
+  <h4>Day 9–10: Guwahati & Kamakhya Temple – Fly to Kolkata</h4>
+  <p>Evening in Guwahati and sacred temple visit before flight.</p>
+
+  <h4>Day 11–14: Sundarbans Cruise (Vivada Cruises)</h4>
+  <p>Luxury river cruise with wildlife excursions, island visits, and live performances.</p>
+
+  <h4>Day 15: Return to Kolkata</h4>
+  <p>Transfer to the airport for onward travel.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Your journey ends with memories of riverfront adventures, culture, and wildlife</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

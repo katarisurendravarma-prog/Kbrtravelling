@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suján The Serai | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8e1, #ffffff);
+      color: #4e342e;
+    }
+
+    header {
+      background: linear-gradient(to right, #c28f5c, #ffe0b2);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #4e342e;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #5d4037;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #a1887f;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #6d4c41;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #fbe9e7;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #a1887f;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #8d6e63;
+    }
+
+    footer {
+      background: #6d4c41;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Suján The Serai</h1>
+  <p>A Desert Oasis of Luxury in the Heart of Rajasthan</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Set on a <strong>100-acre private estate</strong> in the <strong>Thar Desert</strong>, SUJÁN The Serai blends regal Rajputana traditions with contemporary luxury. Crafted in <strong>golden Jaisalmer sandstone</strong>, this tented oasis offers unmatched serenity and heritage living near <strong>Jaisalmer</strong>.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>🏜️ Overview</h2>
+  <p>Inspired by ancient caravanserais, The Serai features <strong>21 luxurious tents</strong>, including private pool suites and a royal tented residence. Every corner is designed to offer comfort, privacy, and a deep connection with the desert’s rhythm.</p>
+
+  <h2>🌟 Highlights</h2>
+  <ul>
+    <li>21 tented suites including 6 with private gardens and heated plunge pools</li>
+    <li>Royal tented suite with private spa, dining pavilion, and pool</li>
+    <li>Crafted by local artisans using eco-friendly desert materials</li>
+    <li>Signature wellness experiences and authentic Rajasthani cuisine</li>
+    <li>Proximity to Jaisalmer’s Golden Fort and sand dune adventures</li>
+  </ul>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Experience royal desert hospitality with soul, silence, and starlight</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Experiencing India in Elegance 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

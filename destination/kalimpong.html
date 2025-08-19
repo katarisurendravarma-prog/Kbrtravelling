@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalimpong | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0fff0, #e0f2f1);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #81c784, #66bb6a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #388e3c;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(129, 199, 132, 0.2);
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kalimpong – A Hill Station of Serenity & Heritage</h1>
+    <p>Where hills whisper stories of culture and calm</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌿 About Kalimpong</h2>
+    <p>Located in northern West Bengal, Kalimpong is a peaceful hill town known for vibrant flower markets and heritage institutions. It was once a trade hub between India and Tibet and is now a scenic cultural getaway.</p>
+
+    <div class="highlight fade-up">
+      <h2>🏞️ Top Places to Visit</h2>
+      <ul>
+        <li><strong>Deolo Hill:</strong> The highest point in Kalimpong offering views and adventure sports.</li>
+        <li><strong>Cactus Nursery:</strong> Showcasing rare exotic plant species and export varieties.</li>
+        <li><strong>Durpin Dara Hill:</strong> Views of the Himalayas and Teesta Valley near Zang Dhok Palri Monastery.</li>
+      </ul>
+    </div>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">Kalimpong is pleasant year-round, but summer and winter offer the best experiences for sightseeing and chilly mountain air.</p>
+
+    <h2 class="fade-up">🎒 Things to Do</h2>
+    <ul class="fade-up">
+      <li><strong>Explore Morgan House:</strong> A British-era haunted mansion</li>
+      <li><strong>Visit Lepcha Museum:</strong> Learn about tribal culture and traditions</li>
+    </ul>
+
+    <h2 class="fade-up">🚗 How to Reach</h2>
+    <p class="fade-up"><strong>By Road:</strong> Connected to Bagdogra (79 km), Siliguri (70 km), Gangtok (75 km), and Darjeeling (50 km).</p>
+
+    <h2 class="fade-up">🚉 Nearest Railway Station & Buses</h2>
+    <p class="fade-up"><strong>NJP (New Jalpaiguri)</strong> – 71 km away. Buses available from Siliguri, Kolkata, Gangtok, and Darjeeling.</p>
+
+    <h2 class="fade-up">✈️ Nearest Airport</h2>
+    <p class="fade-up"><strong>Bagdogra Airport</strong> – 79 km away with flights from Kolkata, Delhi, and Guwahati.</p>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

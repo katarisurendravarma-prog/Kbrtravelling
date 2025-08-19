@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jaisalmer | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8e1, #ffe0b2);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #d4af37, #fbc02d);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #8d6e63;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #fff8dc;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(255, 193, 7, 0.2);
+    }
+
+    footer {
+      background: #6d4c41;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Jaisalmer – The Golden City of Rajasthan</h1>
+    <p>A desert dream with forts, dunes, and timeless beauty</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🏜️ Welcome to Jaisalmer</h2>
+    <p>Nestled in the heart of the <strong>Thar Desert</strong>, <strong>Jaisalmer</strong> glows with yellow sandstone architecture and echoes of valor and royalty. Often called the “Golden City,” it is a magnificent blend of heritage and culture.</p>
+
+    <div class="highlight fade-up">
+      <h2>🌟 Top Attractions</h2>
+      <ul>
+        <li><strong>Jaisalmer Fort:</strong> A UNESCO site built from yellow sandstone, also known as Sonar Quila.</li>
+        <li><strong>Gadsisar Lake:</strong> A peaceful retreat with boats and stunning architecture.</li>
+        <li><strong>Patwon Ki Haveli:</strong> A cluster of five intricately designed havelis showcasing Rajasthani craftsmanship.</li>
+        <li><strong>Sam Sand Dunes:</strong> Desert safaris, sunset views, and the vibrant Desert Festival in February.</li>
+      </ul>
+    </div>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">Plan your trip between <strong>December and February</strong> for cool weather. Avoid peak summer months due to extreme desert heat.</p>
+
+    <h2 class="fade-up">🎉 Top Activities</h2>
+    <ul class="fade-up">
+      <li><strong>Camel Safari:</strong> Sunset rides across the golden dunes</li>
+      <li><strong>Boating at Gadsisar Lake:</strong> Relax and enjoy peaceful views</li>
+      <li><strong>Parasailing:</strong> Adventure above the desert plains</li>
+    </ul>
+
+    <h2 class="fade-up">🚗 How to Reach</h2>
+    <p class="fade-up"><strong>By Road:</strong> Jodhpur (300 km) is the nearest major city with buses and taxis available.<br>
+    <strong>By Train:</strong> Jaisalmer Railway Station connects via limited routes.<br>
+    <strong>By Air:</strong> Jaisalmer Airport offers seasonal flights from Jaipur and Jodhpur.</p>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

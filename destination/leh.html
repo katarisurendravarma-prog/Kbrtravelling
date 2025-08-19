@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leh | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0f4f8, #e8f5e9);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #1565c0, #42a5f5);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #0d47a1;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #1a237e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul { padding-left: 20px; }
+
+    .highlight {
+      background: #e3f2fd;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Leh – The Land of High Passes</h1>
+  <p>Explore the rugged charm and mystical beauty of Ladakh</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Located at an altitude of <strong>3,524 meters</strong> above sea level in Ladakh, <strong>Leh</strong> is surrounded by rugged mountains and pristine beauty. From Buddhist monasteries and blue lakes to mystical magnetic hills and camel safaris – Leh is a land of wonder and high-altitude adventures.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>Visit Leh from <strong>May to August</strong> for the best weather. September is also wonderful due to the colorful <strong>Ladakh Festival</strong>.</p>
+
+  <h2>📍 Top Places to Visit</h2>
+  <ul>
+    <li><strong>Leh Palace:</strong> 17th-century royal residence with panoramic views.</li>
+    <li><strong>Hemis Monastery:</strong> The largest and wealthiest monastery in Ladakh.</li>
+    <li><strong>Thiksey Monastery:</strong> Known for its 49ft Maitreya Buddha statue.</li>
+    <li><strong>Shey Palace & Monastery:</strong> Features a giant copper Buddha statue.</li>
+    <li><strong>Shanti Stupa:</strong> A peaceful dome structure with panoramic views.</li>
+  </ul>
+
+  <h2>🎒 Things to Do in Leh</h2>
+  <ul>
+    <li>Marvel at the crystal-blue <strong>Pangong Lake</strong></li>
+    <li>Visit <strong>Tso Moriri</strong>, India’s highest lake</li>
+    <li>Defy gravity at <strong>Magnetic Hill</strong></li>
+    <li>Experience the vibrant <strong>Chham Dance</strong> during Ladakh Festival</li>
+    <li>Ride a Bactrian camel in <strong>Nubra Valley</strong></li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <p><strong>By Road:</strong> 418 km from Srinagar, 473 km from Manali with scenic mountain routes.</p>
+
+  <h3>🚉 Nearest Railway Station</h3>
+  <p><strong>Jammu Tawi</strong> – about 712 km from Leh.</p>
+
+  <h3>✈️ Nearest Airport</h3>
+  <p><strong>Kushok Bakula Rimpochee Airport</strong> with flights from Delhi, Mumbai, and Srinagar.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

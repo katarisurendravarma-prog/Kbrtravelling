@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darjeeling | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f5f9ff, #e0f2fe);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #2563eb, #3b82f6);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #e0f2fe;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #3b82f6;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    }
+
+    .highlight {
+      background: #f0f9ff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+    }
+
+    footer {
+      background: #e0f2fe;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Darjeeling – Queen of the Hills</h1>
+    <p>Tea gardens, toy trains, and Himalayan vistas await you</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌄 Overview of Darjeeling</h2>
+    <p>Darjeeling is a scenic hill station in West Bengal, nestled in the Eastern Himalayas. Known for its tea estates, British charm, and Himalayan views, Darjeeling offers a serene getaway year-round. It’s a perfect mix of nature, culture, and adventure.</p>
+
+    <div class="highlight fade-up">
+      <h2>🚂 Darjeeling Himalayan Railway</h2>
+      <p>The famous Toy Train, a UNESCO World Heritage Site, takes you through lush hills and charming towns, offering a nostalgic ride through Darjeeling’s magical landscape.</p>
+    </div>
+
+    <h2 class="fade-up">🏞️ Best Places to Visit</h2>
+    <ul class="fade-up">
+      <li>🏔️ Tiger Hill – Witness a stunning sunrise over Kanchenjunga</li>
+      <li>🚞 Batasia Loop – A spiral railway loop with gardens and war memorial</li>
+      <li>🧘 Peace Pagoda – Serene spot showcasing Buddhist teachings</li>
+      <li>🐾 Himalayan Zoological Park – Home to snow leopards and red pandas</li>
+      <li>🏛️ Himalayan Mountaineering Institute – Museum and training center for mountain lovers</li>
+    </ul>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">March to June and October to February offer pleasant weather. Summer is great for sightseeing, while winters bring snow and crisp mountain air.</p>
+
+    <h2 class="fade-up">🎉 Festivals & Events</h2>
+    <ul class="fade-up">
+      <li>Durga Puja – Cultural celebration in September/October</li>
+      <li>Darjeeling Carnival – Music, dance, and local food (November)</li>
+      <li>Buddha Jayanti – Celebrated in local monasteries (April/May)</li>
+      <li>Tihar – Festival of Lights, similar to Diwali</li>
+    </ul>
+
+    <h2 class="fade-up">🛤️ How to Reach</h2>
+    <p class="fade-up">
+      <strong>By Air:</strong> Bagdogra Airport (70 km); taxi or bus to Darjeeling<br>
+      <strong>By Train:</strong> Nearest major station is New Jalpaiguri (NJP); toy train or taxi to Darjeeling<br>
+      <strong>By Road:</strong> Well connected to Siliguri, Kolkata, and other cities
+    </p>
+
+    <h2 class="fade-up">📍 Nearby Places</h2>
+    <ul class="fade-up">
+      <li>Kalimpong – Colonial charm and monasteries</li>
+      <li>Mirik – Lake, gardens, and orange orchards</li>
+      <li>Kurseong – Peaceful town with tea estates</li>
+      <li>Siliguri – Base town for travel and shopping</li>
+      <li>Sandakphu – Trekking haven with Himalayan views</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Embrace tranquility in the tea-scented hills of Darjeeling 🍃
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

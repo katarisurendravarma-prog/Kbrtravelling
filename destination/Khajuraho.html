@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khajuraho | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fffaf0, #fce4ec);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #ab47bc, #f06292);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6a1b9a;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #f3e5f5;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(171, 71, 188, 0.1);
+    }
+
+    footer {
+      background: #4a148c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Khajuraho – Temples of Passion and Art</h1>
+  <p>UNESCO Heritage that celebrates architecture, dance, and devotion</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>The Khajuraho Temples</strong>, built by the Chandela dynasty between the 9th and 12th centuries, are celebrated for their intricate carvings depicting art, music, and sensuality. Once 85 in number, only 20 have survived, mostly found in the Western and Eastern groups.</p>
+    <p>Legend says the Moon God fathered the dynasty with a beautiful Brahmin woman named Hemvati. Her son Chandravarman built Khajuraho's temples as a tribute to love and human creativity.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit Khajuraho</h2>
+  <p>October to March is ideal for pleasant sightseeing. Summers are very hot (up to 47°C) while monsoon brings heavy rain.</p>
+
+  <h2>🏛️ Top Places to Visit</h2>
+  <ul>
+    <li><strong>Kandariya Mahadev Temple:</strong> The grandest temple dedicated to Shiva.</li>
+    <li><strong>Lakshmana Temple:</strong> Exquisite carvings, dedicated to Vishnu.</li>
+    <li><strong>Chaturbhuj Temple:</strong> A unique Vishnu shrine without erotic art.</li>
+    <li><strong>Raneh Falls:</strong> A scenic canyon waterfall on the Ken River.</li>
+    <li><strong>Panna National Park:</strong> Tigers, birds, and river safaris await you.</li>
+    <li><strong>Beni Sagar Dam:</strong> Perfect for picnics and boat rides.</li>
+    <li><strong>Archaeological Museum:</strong> Sculptures and stories of ancient India.</li>
+  </ul>
+
+  <h2>🎟️ Top Things to Do</h2>
+  <ul>
+    <li>Attend the evening <strong>Sound & Light Show</strong> at the temples</li>
+    <li>Explore <strong>Jain Museum</strong> and <strong>Kandariya Art Centre</strong></li>
+    <li><strong>Village walks</strong> to nearby rural communities</li>
+    <li><strong>Ayurvedic massage</strong> and wellness therapies</li>
+    <li><strong>Sample local cuisine</strong>: bafla, chakki ki shaak, mawa-bati</li>
+  </ul>
+
+  <h2>✨ Why Khajuraho is Famous</h2>
+  <p>Khajuraho is India’s most artistic expression of <strong>eroticism in stone</strong>, where temples showcase boldness, beauty, and sacred storytelling through sculpture.</p>
+
+  <h2>🚗 How to Reach</h2>
+  <p>
+    <strong>By Air:</strong> Direct flights from Delhi, Mumbai, Agra, and Varanasi.<br>
+    <strong>By Train:</strong> Khajuraho Railway Station connects to Delhi and Varanasi.<br>
+    <strong>By Road:</strong> Well-linked by highways to Jhansi, Satna, and Bhopal.
+  </p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Periyar | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #eefbe5, #ffffff);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #2e7d32, #66bb6a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2e7d32;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #33691e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Periyar – The Untamed Wilderness of Kerala</h1>
+  <p>Home to lush forests, wild tigers, and the magical backwaters of Thekkady</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Located in the <strong>Western Ghats</strong> of Kerala, <strong>Periyar Wildlife Sanctuary</strong> is one of India’s most captivating eco-tourism destinations. From the <strong>Bengal tiger</strong> to tranquil backwaters and spice plantations, it’s an immersive nature experience set in <strong>Thekkady</strong>.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>Periyar is open all year round, but the best months are <strong>September to April</strong> when the weather is ideal for safaris, hiking, and nature tours.</p>
+
+  <h2>🐅 Top Attractions in Periyar</h2>
+  <ul>
+    <li><strong>Periyar Tiger Reserve:</strong> Home to Bengal tigers, elephants, wild boars, and unique birdlife</li>
+    <li><strong>Mangla Devi Temple, Kurikaddy & Chellarkovil:</strong> Spiritual, scenic, and eco-tourism spots</li>
+    <li><strong>Kathakali & Kalari Shows:</strong> Traditional performances at Mudra & Kadathanadan Kalari Centres</li>
+    <li><strong>Anakkara Village:</strong> Known for its spice plantations and waterfalls</li>
+    <li><strong>Organic Farms:</strong> Guided tours of cardamom, cinnamon, and medicinal herb plantations</li>
+  </ul>
+
+  <h2>🎒 Things to Do in Periyar</h2>
+  <ol>
+    <li><strong>Boat Safari:</strong> Spot elephants and birds while cruising Periyar Lake</li>
+    <li><strong>Bamboo Rafting:</strong> Eco-adventure through forested waters</li>
+    <li><strong>Border Hiking:</strong> Trek with forest guides along remote trails</li>
+    <li><strong>Kayaking in Gavi:</strong> Paddle through serene jungle waterways</li>
+  </ol>
+
+  <h2>🚗 How to Reach</h2>
+  <ul>
+    <li><strong>By Road:</strong> Nearest hub is <strong>Kumily</strong>, connected to Madurai, Ernakulam, and Kottayam</li>
+    <li><strong>By Train:</strong> <strong>Kottayam Railway Station</strong> – 114 km away</li>
+    <li><strong>By Air:</strong> <strong>Madurai Airport</strong> (140 km) or <strong>Cochin International Airport</strong> (190 km)</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

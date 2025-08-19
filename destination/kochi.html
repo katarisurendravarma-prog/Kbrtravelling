@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kochi | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet"/>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f0fdf4, #ecfdf5);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #059669, #10b981);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #047857;
+      margin-bottom: 20px;
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #d1fae5;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #10b981;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .highlight {
+      background: #ecfdf5;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(5, 150, 105, 0.1);
+    }
+
+    footer {
+      background: #d1fae5;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      ul li { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kochi – Queen of the Arabian Sea</h1>
+    <p>Colonial charm, coastal bliss, and cultural brilliance await</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌴 Overview of Kochi</h2>
+    <p>Kochi (Cochin) is a vibrant port city in Kerala, blending colonial legacies with tropical backwaters. Known for its Chinese fishing nets, spice markets, and historic quarters like Fort Kochi, it’s a melting pot of cultures and a coastal gem on the Arabian Sea.</p>
+
+    <div class="highlight fade-up">
+      <h2>🏛️ Cultural Heritage</h2>
+      <p>From Portuguese churches to Jewish synagogues and Dutch palaces, Kochi’s past is shaped by centuries of global trade and colonial presence. Its art, architecture, and cuisine reflect a truly global spirit rooted in Kerala’s traditions.</p>
+    </div>
+
+    <h2 class="fade-up">📍 Best Places to Visit</h2>
+    <ul class="fade-up">
+      <li>🛶 Fort Kochi – Iconic fishing nets, colonial streets, and art cafés</li>
+      <li>🏰 Mattancherry Palace – Murals and royal artifacts from the Dutch era</li>
+      <li>🕍 Jew Town & Paradesi Synagogue – Spice markets and India’s oldest synagogue</li>
+      <li>🌅 Marine Drive – Perfect for sunset walks and skyline views</li>
+      <li>🎭 Kerala Folklore Museum – Explore regional art, costumes, and culture</li>
+    </ul>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">
+      Visit Kochi from October to March for pleasant weather and ideal sightseeing. Summers are hot and humid, while monsoons turn the city lush but wet.
+    </p>
+
+    <h2 class="fade-up">🎉 Festivals & Events</h2>
+    <ul class="fade-up">
+      <li>Kochi-Muziris Biennale – India’s largest art exhibition (Dec–Mar)</li>
+      <li>Onam – Kerala’s harvest festival with cultural showcases (Aug–Sep)</li>
+      <li>Cochin Carnival – New Year festivity with parades and music (December)</li>
+    </ul>
+
+    <h2 class="fade-up">🎯 Things to Do</h2>
+    <ul class="fade-up">
+      <li>🎨 Explore Fort Kochi's street art and cafés</li>
+      <li>👀 Watch a traditional Kathakali performance</li>
+      <li>🚤 Take a backwater cruise on Vembanad Lake</li>
+      <li>🛍️ Shop at Lulu Mall or antique stores in Jew Town</li>
+      <li>🍤 Taste fresh seafood at beachside cafés</li>
+      <li>🌶️ Visit spice markets for Kerala flavors</li>
+    </ul>
+
+    <h2 class="fade-up">🛫 How to Reach</h2>
+    <p class="fade-up">
+      <strong>By Air:</strong> Cochin International Airport (COK) has domestic and international connectivity<br>
+      <strong>By Train:</strong> Ernakulam Junction & Town stations connect Kochi to major Indian cities<br>
+      <strong>By Road:</strong> Well connected by NH66 and NH544; frequent buses/taxis from Trivandrum, Bangalore
+    </p>
+
+    <h2 class="fade-up">🌅 Nearby Attractions</h2>
+    <ul class="fade-up">
+      <li>🚤 Alleppey – Famous for houseboat cruises and backwaters (1.5 hrs)</li>
+      <li>🌿 Munnar – Tea gardens and hill station beauty (4–5 hrs)</li>
+      <li>💧 Athirapally Falls – The "Niagara of India" (2 hrs)</li>
+      <li>🕊️ Kumarakom – Bird sanctuary and lakefront resorts</li>
+      <li>🛕 Thrissur – Known for cultural heritage and temples</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Discover coastal culture in the heart of Kerala 🌊
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

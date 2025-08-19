@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goa | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fffef7, #e3f2fd);
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #0288d1, #26c6da);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #01579b;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: #444;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-size: 1.05rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #e1f5fe;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(0, 188, 212, 0.1);
+    }
+
+    footer {
+      background: #b3e5fc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Discover Goa – Where Sun Meets Soul</h1>
+    <p>Beaches, forts, festivals, and flavor – all in one place</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌴 Welcome to Goa</h2>
+    <p>Golden beaches, swaying palms, and a blend of Indian and Portuguese cultures make Goa a traveler’s paradise. From relaxing sunbathing to thrilling water sports, Goa offers unforgettable experiences for everyone.</p>
+
+    <div class="highlight fade-up">
+      <h2>🏖️ Top Experiences</h2>
+      <ul>
+        <li>Relax at Calangute and Baga Beaches</li>
+        <li>Admire the beauty of Dudhsagar Waterfalls</li>
+        <li>Explore forts like Aguada and Chapora</li>
+        <li>Party at Tito’s Street or Club Cubana</li>
+        <li>Join the iconic Sunburn Festival</li>
+      </ul>
+    </div>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">Visit between mid-November and February to enjoy the cool breeze, sunshine, beach events, and the world-famous New Year celebrations.</p>
+
+    <h2 class="fade-up">🌟 Top Attractions</h2>
+    <ul class="fade-up">
+      <li>Calangute Beach – The Queen of Beaches</li>
+      <li>Dudhsagar Falls – Nature's spectacular shower</li>
+      <li>Chapora Fort – A cinematic hilltop escape</li>
+      <li>Aguada Fort – Portuguese history meets sea breeze</li>
+    </ul>
+
+    <h2 class="fade-up">🚗 How to Reach</h2>
+    <p class="fade-up"><strong>By Air:</strong> Dabolim Airport is well-connected<br>
+    <strong>By Train:</strong> Madgaon and Vasco da Gama are the main stations<br>
+    <strong>By Road:</strong> NH-66 connects Goa with Mumbai, Pune, and beyond</p>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

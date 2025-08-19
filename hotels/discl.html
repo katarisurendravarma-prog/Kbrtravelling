@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer | KBR Travelling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .disclaimer-box {
+      background: #fff;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 {
+      color: #ff5e62;
+      margin-bottom: 15px;
+      text-align: center;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      text-align: justify;
+      animation: fadeInUp 1.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .disclaimer-box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="disclaimer-box">
+    <h2>Disclaimer</h2>
+    <p>
+      KBR Travelling is a travel booking and information platform that provides curated packages, destination guides, and customer support. While we strive to ensure accuracy and reliability in all our content, package details, pricing, and availability may change without prior notice.
+      <br><br>
+      KBR Travelling is not liable for any unforeseen events such as natural disasters, travel delays, or cancellations caused by third-party vendors. We recommend travelers verify all details and read the full terms and conditions before booking. All bookings are subject to availability and partner policies.
+    </p>
+  </div>
+</body>
+</html>

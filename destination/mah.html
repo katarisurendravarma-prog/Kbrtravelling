@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahabalipuram | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f5fbe8, #e0f7fa);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #004d40, #00796b);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #00695c;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #004d40;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul { padding-left: 20px; }
+
+    .highlight {
+      background: #e0f2f1;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 121, 107, 0.1);
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mahabalipuram – The Temple City of Tamil Nadu</h1>
+  <p>Where legends meet the ocean's edge</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Mahabalipuram</strong>, also known as Mamallapuram, is a coastal town located <strong>60 km south of Chennai</strong>. A UNESCO World Heritage Site, it's famous for rock-cut temples, cave sanctuaries, and monolithic monuments that date back to the Pallava dynasty of the 7th and 8th centuries.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>From <strong>November to February</strong> when the weather is cool and ideal for sightseeing and outdoor exploration.</p>
+
+  <h2>🏛️ Top Attractions</h2>
+  <ul>
+    <li><strong>Shore Temple:</strong> 8th-century Pallava marvel by the Bay of Bengal.</li>
+    <li><strong>Arjuna’s Penance:</strong> Giant open-air rock relief with mythological scenes.</li>
+    <li><strong>Five Rathas:</strong> Monolithic temples shaped like chariots, each carved from a single stone.</li>
+    <li><strong>Krishna’s Butterball:</strong> A giant granite boulder balanced on a slope for over 1,200 years.</li>
+    <li><strong>Mamallapuram Lighthouse:</strong> Offering panoramic coastal views from above.</li>
+  </ul>
+
+  <h2>🎉 Things to Do</h2>
+  <ul>
+    <li><strong>Attend the Mamallapuram Dance Festival:</strong> Held December–January, showcasing Indian classical dances near Arjuna’s Penance.</li>
+    <li><strong>Explore Indian Seashell Museum:</strong> A unique place with rare shells and marine artifacts.</li>
+    <li><strong>Visit Crocodile Bank:</strong> Just 14 km away, home to over 2,500 crocodiles.</li>
+    <li><strong>Relax on the beach:</strong> Mahabalipuram Beach and Wide Beach are perfect for a sunset walk.</li>
+    <li><strong>Alamparai Fort:</strong> A Mughal-era seaside fort with historic ruins.</li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <p><strong>By Road:</strong> 57 km from Chennai, well connected by bus and taxi.</p>
+
+  <h3>🚉 Nearest Railway Station</h3>
+  <p><strong>Chengalpattu</strong> – 29 km away with good road links.</p>
+
+  <h3>✈️ Nearest Airport</h3>
+  <p><strong>Chennai International Airport</strong> – around 60 km from Mahabalipuram.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

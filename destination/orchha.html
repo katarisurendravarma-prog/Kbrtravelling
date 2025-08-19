@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orchha | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8f0, #e8f5e9);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #2e7d32, #66bb6a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2e7d32;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #33691e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Orchha – The Hidden Heritage of Madhya Pradesh</h1>
+  <p>Where history sleeps in sandstone shadows</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Orchha</strong>, in the Tikamgarh district of Madhya Pradesh, was founded by Bundela Rajput ruler <strong>Rudra Pratap Singh</strong> in the 16th century along the <strong>Betwa River</strong>. Once the Bundela dynasty's capital, it is home to grand palaces, temple spires, and painted murals that echo medieval magnificence.</p>
+  </div>
+
+  <h2>📜 A Glimpse into Orchha’s History</h2>
+  <p>From the 16th to 18th century, Orchha served as a royal capital. Notably, <strong>Raja Bir Singh Ju Deo</strong> left an architectural legacy of chhatris, forts, and palaces. Orchha’s artistry is especially seen in its <strong>Raj Mahal</strong> and <strong>Laxminarayan Temple</strong> murals.</p>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p><strong>October to March</strong> is ideal with temperatures between 10°C–27°C. Avoid the hot summer (up to 45°C) and rainy monsoon months.</p>
+
+  <h2>🏰 Top Attractions in Orchha</h2>
+  <ul>
+    <li><strong>Orchha Fort Complex:</strong> Includes Jehangir Mahal, Raj Mahal, and Sheesh Mahal</li>
+    <li><strong>Chaturbhuj Temple:</strong> Home to a 9-foot idol of Lord Vishnu</li>
+    <li><strong>Ram Raja Temple:</strong> The only temple worshipping Ram as a king</li>
+    <li><strong>Rai Praveen Mahal:</strong> Palace of poetry and royal romance</li>
+    <li><strong>Phool Bagh:</strong> A lush garden complex of fountains and flowers</li>
+    <li><strong>Betwa River:</strong> Offers peaceful riverside walks and boating</li>
+  </ul>
+
+  <h2>🎒 Things to Do</h2>
+  <ol>
+    <li>Explore the <strong>Orchha Fort</strong> and its murals</li>
+    <li>Visit <strong>Ram Raja Temple</strong> during aarti</li>
+    <li>Take a <strong>boat ride</strong> on the Betwa River</li>
+    <li>Attend the <strong>Sound and Light Show</strong> at the fort</li>
+    <li>Visit <strong>Dauji ki Haveli</strong> and Chhatris</li>
+  </ol>
+
+  <h2>🛣️ How to Reach Orchha</h2>
+  <ul>
+    <li><strong>By Air:</strong> Gwalior Airport – 140 km</li>
+    <li><strong>By Train:</strong> Jhansi Junction – 18 km</li>
+    <li><strong>By Road:</strong> Connected to Gwalior, Bhopal & Khajuraho</li>
+  </ul>
+
+  <h2>🏛️ Excursion: Orchha to Khajuraho</h2>
+  <p>Located 172 km from Orchha, <strong>Khajuraho</strong> is a UNESCO World Heritage Site renowned for its temple sculptures and Chandela architecture—a perfect add-on to your journey.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

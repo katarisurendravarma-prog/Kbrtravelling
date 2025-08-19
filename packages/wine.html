@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wine Tour | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: linear-gradient(to bottom, #fdfdfd, #f1f1f1); color: #333; }
+
+    header {
+      background: linear-gradient(to right, #2e1437, #61235f);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #61235f;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      color: #2e1437;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #f2e8f5;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(97, 35, 95, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #61235f;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #2e1437;
+    }
+
+    footer {
+      background: #2e1437;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Wine Trail Through Western India</h1>
+  <p>Unwind through vineyards, heritage cities, and fine wine tasting experiences</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Destinations:</strong> Mumbai – Nashik – Pune – Bangalore – Mysore – Bangalore</p>
+    <p><strong>Duration:</strong> 10 Days / 09 Nights</p>
+    <p><strong>Best Time to Visit:</strong> All Year Round</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>🍷 Wine Tour Itinerary</h2>
+
+  <h4>Day 1: Arrive in Mumbai</h4>
+  <p>Arrive in Mumbai and transfer to your hotel. Rest of the day at leisure.</p>
+
+  <h4>Day 2: Mumbai Sightseeing</h4>
+  <p>Explore the Elephanta Caves and visit Gateway of India. Drive through Marine Drive and visit Mani Bhawan, Hanging Gardens, and Dhobi Ghat.</p>
+
+  <h4>Day 3: Mumbai to Nashik</h4>
+  <p>Drive to Nashik, check in at Beyond Vineyard Resort. Enjoy your first vineyard tour and wine tasting experience in India’s wine capital.</p>
+
+  <h4>Day 4: Nashik Vineyards</h4>
+  <p>Visit Grover Zampa Vineyard and York Winery. Learn winemaking techniques and enjoy tasting 5–7 wine varieties. Visit the Coin Museum and Mukti Dham Temple.</p>
+
+  <h4>Day 5: Nashik to Pune</h4>
+  <p>Drive to Pune and check in. Afternoon visit to Shindyanchi Chhatri and Aga Khan Palace.</p>
+
+  <h4>Day 6: Pune to Bangalore</h4>
+  <p>Fly to Bangalore and check in. Rest of the day at leisure.</p>
+
+  <h4>Day 7: Bangalore – Nandi Hills</h4>
+  <p>Full-day excursion to Grover Vineyards near Nandi Hills. Enjoy guided vineyard and barrel room tour followed by a wine tasting session and lunch.</p>
+
+  <h4>Day 8: Bangalore to Mysore</h4>
+  <p>Drive to Mysore. Visit two local wineries and enjoy regional varietals and culinary pairings.</p>
+
+  <h4>Day 9: Mysore to Bangalore</h4>
+  <p>Visit Mysore Palace in the morning. Return to Bangalore for an afternoon orientation tour including Tipu's Palace, Bull Temple, Lalbagh Garden, and Vidhana Soudha.</p>
+
+  <h4>Day 10: Departure from Bangalore</h4>
+  <p>Transfer to airport for your onward journey.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">“Savor the flavor of India’s finest wines amidst lush vineyards and cultural richness.”</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Wine Tasting & Heritage Journeys 🍇
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

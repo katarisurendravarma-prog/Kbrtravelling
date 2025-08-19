@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stok Palace Heritage | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+      color: #3e2723;
+    }
+
+    header {
+      background: linear-gradient(to right, #3e2723, #6d4c41);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #5d4037;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #6d4c41;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #efebe9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #6d4c41;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #5d4037;
+    }
+
+    footer {
+      background: #4e342e;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Stok Palace Heritage</h1>
+  <p>Live the Legacy of Ladakh</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Step into 200 years of royal history at <strong>Stok Palace</strong>, the original home of Ladakh’s Namgyal dynasty. Nestled in the mountains, this restored palace offers six heritage suites, spiritual serenity, and unforgettable views.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>📍 Location</h2>
+  <p>Stok Village, Ladakh – Jammu & Kashmir, India</p>
+
+  <h2>🏰 The Experience</h2>
+  <p>Wander through stone corridors and sunlit courtyards. Each of the six suites blends antique charm with modern comforts. Dine under the stars or in regal halls. Visit the palace museum, and join the in-house monk for a prayer ceremony.</p>
+
+  <h2>🌿 Chulli Bagh Cottages</h2>
+  <p>Located near the main palace, <strong>Chulli Bagh</strong> offers eco-luxury cottages crafted from wood and mud, surrounded by apricot and walnut orchards. Ideal for year-round stays, especially during the cherry blossom season in April.</p>
+
+  <h2>🎨 Highlights</h2>
+  <ul>
+    <li>Stay in authentic royal suites</li>
+    <li>Explore the in-house museum and library</li>
+    <li>Participate in traditional Buddhist prayers</li>
+    <li>Enjoy Ladakhi cuisine made with local produce</li>
+    <li>Relax at Chulli Bagh’s orchard cottages</li>
+  </ul>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Stok Palace isn't just a stay — it's a step into Ladakh’s living royal legacy.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted Stays for Soulful Journeys 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

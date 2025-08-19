@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | KBR Travelling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .about-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 700px;
+      width: 90%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h2 {
+      color: #ff5e62;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      animation: slideDown 1s ease-out;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: justify;
+      animation: fadeInUp 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .about-container {
+        padding: 25px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="about-container">
+    <h2>About Us</h2>
+    <p>
+      <strong>KBR Travelling</strong> is your trusted companion for exploring the diverse beauty of India. From serene beaches to spiritual retreats, majestic mountains to vibrant festivals — we help you discover it all with carefully crafted travel experiences.
+      <br><br>
+      Our mission is to make travel simple, memorable, and affordable for everyone. Whether you're looking for family vacations, solo adventures, or customized packages, <strong>KBR Travelling</strong> is here to guide you every step of the way.
+      <br><br>
+      Let’s explore India, one journey at a time.
+    </p>
+  </div>
+
+</body>
+</html>

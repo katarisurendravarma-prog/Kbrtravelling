@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jim Corbett | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f0fefc, #e0f7f4);
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+    header {
+      background: radial-gradient(circle at top left, #059669, #34d399);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #047857;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+    ul li {
+      background: #d1fae5;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #10b981;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    }
+    .highlight {
+      background: #ecfdf5;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(5, 150, 105, 0.1);
+    }
+    footer {
+      background: #d1fae5;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      ul li { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore the Wilderness of Jim Corbett</h1>
+    <p>India's first national park filled with majestic tigers, lush forests, and unforgettable safaris</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌲 Welcome to Jim Corbett National Park</h2>
+    <p>Located in Uttarakhand, Jim Corbett National Park is a paradise for wildlife lovers and photographers. Established in 1936, it was the first national park in India and remains one of the best places to spot tigers, explore dense forests, and experience nature at its wildest.</p>
+
+    <div class="highlight fade-up">
+      <h2>🐅 Rich Biodiversity & Safari Adventure</h2>
+      <p>Spread across over 500 sq. km., the park includes forests, river belts, and grasslands. Jeep and elephant safaris, birdwatching, and overnight stays in forest lodges make Corbett a thrilling experience for any traveler.</p>
+    </div>
+
+    <h2 class="fade-up">📸 Top Attractions in Corbett</h2>
+    <ul class="fade-up">
+      <li>Dhikala Zone – Great for tiger sightings and overnight forest lodges</li>
+      <li>Bijrani Zone – Perfect for quick day safaris and dense Sal forests</li>
+      <li>Jhirna Zone – Open all year and known for accessibility</li>
+      <li>Dhela Zone – Quiet, bird-rich zone for a peaceful wildlife trip</li>
+      <li>Garjia Devi Temple – Scenic spiritual site by the river</li>
+    </ul>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">November to February is ideal for wildlife safaris. Summer (March–June) is great for spotting animals near water. The park closes during monsoon (July–Sept).</p>
+
+    <h2 class="fade-up">🛤️ How to Reach</h2>
+    <p class="fade-up">
+      <strong>By Air:</strong> Nearest airport is Pantnagar (80 km)<br/>
+      <strong>By Train:</strong> Nearest railhead is Ramnagar (12 km)<br/>
+      <strong>By Road:</strong> Connected to Delhi (240 km), Nainital (65 km), and Haldwani
+    </p>
+
+    <h2 class="fade-up">🗺️ Nearby Attractions</h2>
+    <ul class="fade-up">
+      <li>Nainital – A hill station with scenic lakes and markets</li>
+      <li>Ranikhet – Lush meadows and colonial charm</li>
+      <li>Binsar – Wildlife sanctuary and Himalayan views</li>
+      <li>Mukteshwar – Adventure destination in the hills</li>
+      <li>Kosi River – Great for birdwatching and riverside picnics</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Dive into the wild spirit of Corbett 🇮🇳
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

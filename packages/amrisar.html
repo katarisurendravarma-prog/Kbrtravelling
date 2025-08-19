@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amritsar | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8f0, #e0f7fa);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #880e4f, #c2185b);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #880e4f;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #6a1b9a;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #fce4ec;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(233, 30, 99, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #c2185b;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #880e4f;
+    }
+
+    footer {
+      background: #880e4f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Amritsar – Spiritual Heart of Punjab</h1>
+  <p>Experience history, heritage, and devotion at the Golden Temple</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Amritsar</strong> is a cultural and spiritual hub of Punjab, home to the revered <strong>Golden Temple</strong>. Known for its historic landmarks, patriotic ceremonies, and soul-touching experiences, it’s a must-visit on any North India itinerary.</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📅 Tour Snapshot</h2>
+  <p><strong>Destinations:</strong> Delhi – Agra – Jaipur – Amritsar</p>
+  <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
+  <p><strong>Best Time to Visit:</strong> September to April</p>
+
+  <h2>🌟 Highlights</h2>
+  <ul>
+    <li>Old & New Delhi: Jama Masjid, Raj Ghat, India Gate</li>
+    <li>Agra: Taj Mahal, Agra Fort, Fatehpur Sikri</li>
+    <li>Jaipur: Amber Fort, Hawa Mahal, City Palace</li>
+    <li>Amritsar: Golden Temple, Jallianwala Bagh, Wagah Border Ceremony</li>
+  </ul>
+
+  <h2>🗓️ Itinerary Highlights</h2>
+
+  <h4>Day 1–2: Delhi</h4>
+  <p>Explore Old and New Delhi including India Gate, Qutub Minar, and Humayun’s Tomb.</p>
+
+  <h4>Day 3–4: Jaipur</h4>
+  <p>Drive to Jaipur. Sightseeing includes Amber Fort, Hawa Mahal, and City Palace.</p>
+
+  <h4>Day 5–6: Agra</h4>
+  <p>Visit the Taj Mahal at sunrise, Agra Fort, and continue to Delhi for the train to Amritsar.</p>
+
+  <h4>Day 7: Amritsar</h4>
+  <p>Visit the Golden Temple, Jallianwala Bagh, and attend the Wagah Border retreat ceremony.</p>
+
+  <h4>Day 8: Departure</h4>
+  <p>Return to Delhi by train for your flight home.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">End of the Golden Triangle Tour with Amritsar</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

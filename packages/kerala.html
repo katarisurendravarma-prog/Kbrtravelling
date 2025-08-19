@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kerala Tour | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: linear-gradient(to bottom, #f7fff9, #d9efe3); color: #333; }
+
+    header {
+      background: linear-gradient(to right, #116530, #58b368);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #116530;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      color: #155f3e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #e4f7ea;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(17, 101, 48, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #116530;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #0d4d28;
+    }
+
+    footer {
+      background: #116530;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Enchanting Kerala Tour</h1>
+  <p>Beaches, backwaters, wildlife & timeless traditions of God's Own Country</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Destinations:</strong> Cochin – Munnar – Periyar – Alleppey – Kovalam</p>
+    <p><strong>Duration:</strong> 10 Days / 9 Nights</p>
+    <p><strong>Best Time to Visit:</strong> September – March</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📝 Kerala Tour Itinerary</h2>
+
+  <h4>Day 1: Arrive in Cochin</h4>
+  <p>Meet & greet at the airport and transfer to hotel. Welcome to Kerala – land of greenery and tradition.</p>
+
+  <h4>Day 2: Cochin Sightseeing</h4>
+  <p>Explore Dutch Palace, Jewish Synagogue, and St. Francis Church. Witness the famous Kathakali dance performance in the evening.</p>
+
+  <h4>Day 3: Cochin to Munnar</h4>
+  <p>Drive to Munnar – a beautiful hill station. Check in at hotel and relax amidst tea gardens.</p>
+
+  <h4>Day 4: Munnar Sightseeing</h4>
+  <p>Visit Kundala Lake, Tea Museum, Mattupetty Dam, Anaimudi Peak, and spice plantations.</p>
+
+  <h4>Day 5: Munnar to Periyar</h4>
+  <p>Drive to Periyar. Check-in and spend the rest of the day at leisure near the sanctuary.</p>
+
+  <h4>Day 6: Periyar</h4>
+  <p>Enjoy a nature walk, elephant ride, and a boat cruise on Periyar Lake to spot wildlife in their natural habitat.</p>
+
+  <h4>Day 7: Periyar to Alleppey (Houseboat)</h4>
+  <p>Drive to Alleppey and board a traditional houseboat. Cruise along the tranquil backwaters and enjoy village life.</p>
+
+  <h4>Day 8: Alleppey to Kovalam</h4>
+  <p>Drive to Kovalam – Kerala’s beach paradise. Spend your day relaxing on the sand or exploring local attractions.</p>
+
+  <h4>Day 9: Kovalam</h4>
+  <p>Free day to unwind and enjoy Kovalam’s scenic coastline.</p>
+
+  <h4>Day 10: Departure from Trivandrum</h4>
+  <p>Drive to Trivandrum airport for your onward journey, taking back memories of serene Kerala.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">“Kerala – where every step reveals a story, and every view soothes the soul.”</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Designed with ❤️ for nature & culture explorers
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

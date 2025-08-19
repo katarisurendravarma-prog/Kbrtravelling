@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alleppey | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fffef7, #f0f8ff);
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #4db6ac, #81d4fa);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #00796b;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    h3 {
+      color: #444;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #e0f7fa;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(0, 150, 136, 0.1);
+    }
+
+    footer {
+      background: #e0f2f1;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Alleppey – The Backwater Jewel of Kerala</h1>
+    <p>Where tranquility sails on shimmering waters</p>
+  </header>
+
+  <section class="fade-up">
+    <h2>🌿 About Alleppey</h2>
+    <p>Known as ‘God’s Own Country’, Kerala enchants travelers with lush landscapes and serene backwaters. Alleppey (Alappuzha), often called the "Venice of the East", offers magical experiences via its lakes, canals, and houseboats.</p>
+
+    <div class="highlight fade-up">
+      <h2>🚤 Top Experiences</h2>
+      <ul>
+        <li>Houseboat cruises through the scenic backwaters</li>
+        <li>Bird watching at Kumarakom Bird Sanctuary</li>
+        <li>Traditional Ayurvedic spa & massages</li>
+        <li>Shopping for coir products and local handicrafts</li>
+        <li>Witness the famous Nehru Trophy Boat Race</li>
+      </ul>
+    </div>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">November to February offers the most pleasant weather for cruising and sightseeing. Summers bring preparation for festivals, while monsoons showcase Kerala’s lush beauty.</p>
+
+    <h2 class="fade-up">🏞️ Top Attractions</h2>
+    <ul class="fade-up">
+      <li>Kuttanad – Farming below sea level</li>
+      <li>Alleppey Lighthouse – Historic views by the beach</li>
+      <li>Temples & Churches – Ambalapuzha, Arthunkal & more</li>
+      <li>Krishnapuram Palace – Museum with murals</li>
+    </ul>
+
+    <h2 class="fade-up">🚗 How to Reach</h2>
+    <p class="fade-up"><strong>By Air:</strong> Cochin Airport (83 km)<br>
+    <strong>By Train:</strong> Alappuzha Railway Station<br>
+    <strong>By Road:</strong> Buses available from Kochi, Chennai, Mysore</p>
+  </section>
+
+  <footer>
+    © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

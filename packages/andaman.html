@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andaman | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #00796b, #26a69a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #00796b;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #00695c;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #e0f2f1;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 121, 107, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #00796b;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Andaman & Havelock Island Tour</h1>
+  <p>Uncover the turquoise beauty of India's island paradise</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Andaman & Havelock Island</strong> offers a serene escape into one of India’s most breathtaking tropical destinations. Discover crystal-clear waters, coral reefs, scenic ferry rides, and stories of India's freedom fighters at the Cellular Jail.</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📍 Destinations Covered</h2>
+  <p>Port Blair – Havelock Island – Viper Island</p>
+
+  <h2>🗓️ Duration</h2>
+  <p>6 Days / 5 Nights</p>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>October to March</p>
+
+  <h2>🌴 Overview</h2>
+  <p>
+    This tour blends leisure and adventure — whether it’s soaking in the beauty of Radhanagar Beach, snorkeling at Elephant Beach, exploring the colonial remnants on Ross Island, or witnessing the historic Light & Sound show at the Cellular Jail — every moment is magical.
+  </p>
+
+  <h2>📝 Detailed Itinerary</h2>
+
+  <h4>Day 1: Arrival in Port Blair – Cellular Jail & Light Show</h4>
+  <p>Visit Corbyn’s Cove Beach followed by the Sound & Light show at Cellular Jail.</p>
+
+  <h4>Day 2: Port Blair – Havelock Island & Radhanagar Beach</h4>
+  <p>Take a ferry to Havelock Island. Enjoy the world-famous Radhanagar Beach.</p>
+
+  <h4>Day 3: Elephant Beach & Snorkeling</h4>
+  <p>Snorkeling adventure at Elephant Beach and leisure evening at Havelock Island.</p>
+
+  <h4>Day 4: Kala Pathar Beach Visit & Return to Port Blair</h4>
+  <p>Visit Kala Pathar Beach. Later, return to Port Blair via ferry.</p>
+
+  <h4>Day 5: Excursion to North Bay, Ross Island & Viper Island</h4>
+  <ul>
+    <li>North Bay: Coral reefs & marine life</li>
+    <li>Ross Island: Colonial ruins & deer parks</li>
+    <li>Viper Island: Harbor cruise and panoramic views</li>
+  </ul>
+
+  <h4>Day 6: Departure</h4>
+  <p>Transfer to the airport after breakfast for your flight back home.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Tour Ends with Sweet Memories of the Andaman Islands</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

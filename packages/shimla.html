@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Triangle Tour with Shimla | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: linear-gradient(to bottom, #f8fcff, #d9e7f2); color: #333; }
+
+    header {
+      background: linear-gradient(to right, #3f2b96, #a8c0ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #3f2b96;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      color: #3f2b96;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      background: #eaf0ff;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(63, 43, 150, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #3f2b96;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #2b2070;
+    }
+
+    footer {
+      background: #3f2b96;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Golden Triangle Tour with Shimla</h1>
+  <p>Explore India’s Royal Past & Colonial Charm in One Breathtaking Journey</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Destinations:</strong> Delhi – Agra – Jaipur – Shimla – Delhi</p>
+    <p><strong>Duration:</strong> 10 Days / 09 Nights</p>
+    <p><strong>Best Time to Visit:</strong> September to November, December to January for winter lovers</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📋 Golden Triangle with Shimla Tour Itinerary</h2>
+
+  <h4>Day 1: Arrive in Delhi</h4>
+  <p>Arrive at Delhi International Airport. Warm welcome and transfer to hotel for overnight stay.</p>
+
+  <h4>Day 2: Delhi City Tour</h4>
+  <p>Full-day guided sightseeing of Old and New Delhi including Jama Masjid, Chandni Chowk Rickshaw Ride, Red Fort (drive past), Raj Ghat, Humayun’s Tomb, India Gate, and President House.</p>
+
+  <h4>Day 3: Delhi to Agra</h4>
+  <p>Drive to Agra. Visit the grand Agra Fort and the magnificent Taj Mahal by sunset. Free time for leisure.</p>
+
+  <h4>Day 4: Agra to Jaipur (via Fatehpur Sikri)</h4>
+  <p>En route visit Fatehpur Sikri, a Mughal architectural marvel. On arrival in Jaipur, enjoy local bazaars.</p>
+
+  <h4>Day 5: Jaipur Sightseeing</h4>
+  <p>Explore Amber Fort, City Palace, Jantar Mantar, and enjoy a photo stop at Hawa Mahal (Palace of Winds).</p>
+
+  <h4>Day 6: Jaipur to Shimla (via Chandigarh)</h4>
+  <p>Morning flight to Chandigarh, then scenic drive to Shimla. Arrive and check-in at the hotel.</p>
+
+  <h4>Day 7: Shimla Tour</h4>
+  <p>Enjoy a full-day sightseeing in Shimla covering Viceroy Lodge, Jakhu Temple, and Mall Road shopping.</p>
+
+  <h4>Day 8: Shimla to Delhi (via Chandigarh)</h4>
+  <p>Drive to Chandigarh and board a flight to Delhi. Arrive and transfer to hotel for overnight stay.</p>
+
+  <h4>Day 9: Departure from Delhi</h4>
+  <p>Transfer to Delhi International Airport for your onward journey.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">“Experience the heart of India’s legacy, crowned with the Himalayan mist.”</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with heritage & Himalayan charm ❄️
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

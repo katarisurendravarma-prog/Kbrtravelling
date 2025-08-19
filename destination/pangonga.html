@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pangong Lake | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0f4ff, #e1f5fe);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #0277bd, #29b6f6);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #01579b;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #0277bd;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e1f5fe;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(2, 119, 189, 0.1);
+    }
+
+    footer {
+      background: #01579b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pangong Tso – The Shimmering Jewel of Ladakh</h1>
+  <p>Witness the crystal waters between India and China</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Stretching across 134 kilometers, <strong>Pangong Tso</strong> is a transboundary lake that extends from India to China. It is known for its surreal blue waters, scenic backdrop of the Himalayas, and tranquil atmosphere that captivates every traveler’s heart.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>Between <strong>June and September</strong> for pleasant weather. In winter (Oct–Feb), the lake freezes and becomes a playground for <strong>ice skating</strong>.</p>
+
+  <h2>🏞️ Nearby Attractions</h2>
+  <h3>Shanti Stupa</h3>
+  <p>Located in Leh, this white-domed monument was built by Japanese Buddhists and offers panoramic views and spiritual calmness.</p>
+
+  <h3>Chang La Pass</h3>
+  <p>One of the world’s highest motorable passes, this gateway to Pangong Lake provides stunning Himalayan views.</p>
+
+  <h2>🎒 Things to Do</h2>
+  <ul>
+    <li><strong>Camping:</strong> Spend the night under a starry sky near the lake</li>
+    <li><strong>Ice Skating:</strong> Enjoy skating on the frozen surface in winter</li>
+    <li><strong>Wildlife Photography:</strong> Capture bar-headed geese, Siberian cranes, and rare birds</li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <ul>
+    <li><strong>By Road:</strong> Pangong is 150 km from Leh via Chang La Pass (5-6 hour drive)</li>
+    <li><strong>By Train:</strong> Nearest railhead is <strong>Jammu</strong>. Continue by flight or road to Leh</li>
+    <li><strong>By Air:</strong> Nearest airport is <strong>Kushok Bakula Rimpochee Airport</strong> in Leh</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

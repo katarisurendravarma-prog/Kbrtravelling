@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pelling | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0f4ff, #e8f5e9);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #388e3c, #66bb6a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1b5e20;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #33691e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pelling – The Gateway to Kanchenjunga Views</h1>
+  <p>Explore the charm of Sikkim’s peaceful hill retreat</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Pelling</strong> is a serene hill town nestled in the West Sikkim district, famous for its breathtaking views of the <strong>Kanchenjunga range</strong>. With monasteries, waterfalls, and nature trails, it’s a perfect escape for nature lovers and peace seekers.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p><strong>March to May</strong> and <strong>September to December</strong> offer clear skies and cool weather, perfect for sightseeing and treks.</p>
+
+  <h2>🌄 Top Attractions</h2>
+  <ul>
+    <li><strong>Rabdentse Ruins:</strong> Remnants of the former capital of Sikkim, overlooking forested valleys</li>
+    <li><strong>Pemayangtse Monastery:</strong> One of Sikkim’s oldest and most significant monasteries</li>
+    <li><strong>Skywalk and Chenrezig Statue:</strong> India's first glass skywalk and giant Buddha statue</li>
+    <li><strong>Khecheopalri Lake:</strong> A sacred and wish-fulfilling lake surrounded by forest</li>
+    <li><strong>Sangachoeling Monastery:</strong> A 17th-century peaceful spot with a short trek</li>
+  </ul>
+
+  <h2>🎒 Things to Do in Pelling</h2>
+  <ul>
+    <li>Walk on the <strong>Pelling Skywalk</strong> and marvel at the 137-ft Chenrezig statue</li>
+    <li>Try <strong>local Sikkimese cuisine</strong> like Thukpa, Phagshapa, and Momos</li>
+    <li>Visit the <strong>Rimbi Waterfalls</strong> and <strong>Kanchenjunga Falls</strong></li>
+    <li>Take short hikes and <strong>nature trails</strong> around Upper Pelling</li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <ul>
+    <li><strong>By Air:</strong> Nearest airport is <strong>Bagdogra Airport</strong> (140 km)</li>
+    <li><strong>By Train:</strong> Nearest station is <strong>New Jalpaiguri (NJP)</strong></li>
+    <li><strong>By Road:</strong> Pelling is well connected to <strong>Gangtok, Siliguri, and Darjeeling</strong> by shared taxis and buses</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

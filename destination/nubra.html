@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nubra Valley | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f3fdfc, #f0f4c3);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #388e3c, #66bb6a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1b5e20;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #33691e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e8f5e9;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nubra Valley – The Cold Desert of Ladakh</h1>
+  <p>Snow peaks, sand dunes, and spiritual sanctity await</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Nestled in the northeast of Ladakh, <strong>Nubra Valley</strong> is known for its unique cold desert landscapes, Buddhist monasteries, and tranquil charm. Located at an altitude of 3,048 m, it is one of the driest and most magical places in the Indian Himalayas.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>Visit from <strong>May to September</strong> for warmth and access. February attracts visitors with the colorful <strong>Dosmoche Festival</strong>.</p>
+
+  <h2>🌄 Top Places to Visit</h2>
+  <h3>Panamik Village</h3>
+  <p>The last village before the Indo-Tibetan border, known for hot springs and Himalayan serenity.</p>
+
+  <h3>Yarab Tso (Hidden Lake)</h3>
+  <p>A sacred alpine lake near Sumur, accessed by a peaceful uphill trek.</p>
+
+  <h3>Maitreya Buddha at Diskit</h3>
+  <p>A majestic 32-meter statue overlooking the valley, symbolizing peace and protection.</p>
+
+  <h2>🐫 Things to Do in Nubra</h2>
+  <ul>
+    <li>Ride a <strong>Bactrian camel</strong> at Hunder’s cold desert</li>
+    <li>Bathe in <strong>Panamik’s sulphur hot springs</strong></li>
+    <li>Buy <strong>local crafts and Pashmina shawls</strong> from local markets</li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <p>Reach Nubra via <strong>Khardung La Pass</strong>, one of the world’s highest motorable roads. Diskit is 150 km from Leh.</p>
+
+  <h3>🚉 Nearest Railway Station</h3>
+  <p><strong>Udhampur Railway Station</strong> – approx. 298 km away.</p>
+
+  <h3>✈️ Nearest Airport</h3>
+  <p><strong>Kushok Bakula Rimpochee Airport</strong> – about 73 km from Nubra.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varanasi | KBR Travel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fffef7, #faf5ff);
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #7f5af0, #a78bfa);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6b46c1;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    ul li {
+      background: #ede9fe;
+      margin-bottom: 10px;
+      padding: 12px 20px;
+      border-left: 5px solid #7c3aed;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+    }
+
+    .highlight {
+      background: #f3e8ff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 8px 20px rgba(107, 70, 193, 0.1);
+    }
+
+    footer {
+      background: #ede9fe;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 50px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Experience the Magic of Varanasi</h1>
+    <p>Where the spiritual and the eternal meet on the banks of the Ganges</p>
+  </header>
+
+  <!-- Varanasi Section -->
+  <section id="varanasi" class="fade-up">
+    <h2>🛕 A City of Temples and Timelessness</h2>
+    <p>Varanasi, also called Kashi or Banaras, is one of the oldest continuously inhabited cities in the world. It's a sacred destination where thousands come in search of peace, enlightenment, and spiritual transformation.</p>
+    
+    <div class="highlight fade-up">
+      <h2>🌊 Ganga Ghats – A Divine Journey</h2>
+      <p>Take a boat ride at dawn along the Ganges and witness life unfold along the iconic ghats like Dashashwamedh and Manikarnika. The evening <strong>Ganga Aarti</strong> is a magical ritual of light, devotion, and song you’ll never forget.</p>
+    </div>
+
+    <h2 class="fade-up">📸 Must-Do Experiences in Varanasi</h2>
+    <ul class="fade-up">
+      <li>Witness the spiritual Ganga Aarti at Dashashwamedh Ghat</li>
+      <li>Enjoy a peaceful sunrise boat ride on the Ganges</li>
+      <li>Visit Sarnath – where Buddha preached his first sermon</li>
+      <li>Explore the narrow alleys filled with street food, shops, and culture</li>
+      <li>Shop for authentic Banarasi silk sarees</li>
+    </ul>
+
+    <h2 class="fade-up">📅 Best Time to Visit</h2>
+    <p class="fade-up">October to March offers pleasant weather for sightseeing and cultural experiences.</p>
+
+    <h2 class="fade-up">🛤️ Getting There</h2>
+    <p class="fade-up"><strong>By Air:</strong> Lal Bahadur Shastri Airport<br/>
+       <strong>By Train:</strong> Well-connected via Varanasi Junction<br/>
+       <strong>By Road:</strong> Regular buses and taxis from major nearby cities</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

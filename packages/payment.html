@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Sheet | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      color: #333;
+      padding-bottom: 90px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #ff5e62;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border-color 0.3s;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #ff5e62;
+    }
+
+    .readonly {
+      background: #eee;
+      font-weight: bold;
+    }
+
+    .verify-upi {
+      margin-top: 8px;
+      display: inline-block;
+      background: #ff5e62;
+      color: white;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .verify-upi:hover {
+      background: #ff3b47;
+    }
+
+    .doubt-box {
+      margin-top: 1.5rem;
+    }
+
+    .doubt-box textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 0;
+      font-size: 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, #ff5e62, #ff9966);
+    }
+
+    @media (max-width: 600px) {
+      .submit-btn {
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" data-aos="fade-up">
+    <h2 data-aos="zoom-in">Customer Payment Details</h2>
+    <form id="paymentForm" onsubmit="return submitForm()">
+      <div class="form-group" data-aos="fade-right">
+        <label for="place">Place Booked</label>
+        <input type="text" id="place" class="readonly" readonly>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group" data-aos="fade-right">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Enter your address" required>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group" data-aos="fade-right">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="travelType">Travel Type</label>
+        <select id="travelType" required>
+          <option value="" disabled selected>Select travel type</option>
+          <option value="Solo">Solo</option>
+          <option value="Couple">Couple</option>
+          <option value="Family">Family</option>
+        </select>
+      </div>
+
+      <div class="form-group" data-aos="fade-right">
+        <label for="amount">Amount (in ₹)</label>
+        <div style="position: relative;">
+          <span style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: #555;">₹</span>
+          <input type="number" id="amount" placeholder="Enter amount" required style="padding-left: 25px;">
+        </div>
+      </div>
+
+      <div class="form-group" data-aos="fade-left">
+        <label for="upi">UPI ID</label>
+        <input type="text" id="upi" placeholder="yourname@upi" required>
+        <button type="button" class="verify-upi" onclick="verifyUPI()">Verify</button>
+      </div>
+
+      <div class="doubt-box" data-aos="zoom-in-up">
+        <label for="doubt">Any Questions or Doubts?</label>
+        <textarea id="doubt" placeholder="Write your question here..."></textarea>
+        <div class="note">Our support team will reach out to clarify your concerns.</div>
+      </div>
+    </form>
+  </div>
+
+  <button class="submit-btn" onclick="submitForm()">Submit Payment</button>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Auto-fill the 'place' from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const place = urlParams.get('place') || 'Unknown';
+    document.getElementById('place').value = place;
+
+    // Verify UPI
+    function verifyUPI() {
+      const upi = document.getElementById("upi").value.trim();
+      if (upi === "") {
+        alert("Please enter your UPI ID before verifying.");
+      } else if (!upi.includes("@")) {
+        alert("❌ Invalid UPI ID format.");
+      } else {
+        alert("✅ UPI ID looks valid.");
+      }
+    }
+
+    // Submit form
+    function submitForm() {
+      const name = document.getElementById("name").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const travelType = document.getElementById("travelType").value;
+      const amount = document.getElementById("amount").value.trim();
+      const upi = document.getElementById("upi").value.trim();
+
+      if (!name || !address || !phone || !age || !upi || !travelType || !amount || amount <= 0) {
+        alert("⚠️ Please fill all required fields correctly before submitting.");
+        return false;
+      }
+
+      alert("✅ Payment submitted successfully!\nThank you for booking with KBR Travel.");
+      document.getElementById("paymentForm").reset();
+      return true;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Golden Chariot | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8e1, #ffffff);
+      color: #4e342e;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a1b9a, #ab47bc);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6a1b9a;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #8e24aa;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: #f3e5f5;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(171, 71, 188, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #8e24aa;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #6a1b9a;
+    }
+
+    footer {
+      background: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Golden Chariot</h1>
+  <p>South India’s Regal Rail Journey</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p>Discover the soul of South India in pure luxury aboard <strong>The Golden Chariot</strong>. With themes inspired by dynasties like the Cholas, Hoysalas, and Vijayanagar Empire, this journey showcases ancient temples, palaces, coastal towns, and vibrant cultures—all in royal comfort.</p>
+  </div>
+
+  <a href="#" class="book-button">Book Now</a>
+
+  <h2>🚆 About The Golden Chariot</h2>
+  <p>Launched in 2008 by the <strong>Karnataka State Tourism Development Corporation (KSTDC)</strong> in collaboration with Indian Railways, the train is named after the iconic stone chariot of Hampi. It was created to present the grandeur, history, and rich cultural heritage of South India in a luxurious format. Today, it remains South India’s only luxury tourist train and offers a regal escape through time.</p>
+
+  <h2>✨ Highlights</h2>
+  <ul>
+    <li>Elegant cabins styled like South Indian palaces</li>
+    <li>Multi-cuisine fine dining with regional specialties</li>
+    <li>Personalized butler service</li>
+    <li>Luxurious spa and wellness facilities on board</li>
+    <li>Cultural performances and guided off-train excursions</li>
+  </ul>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">Embark on a journey where South India’s royal past meets unmatched modern comfort.</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Luxury Redefined on Rails 🚆🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

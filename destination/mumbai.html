@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mumbai | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #f0f4f8, #e1f5fe);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #0d47a1, #1976d2);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #0d47a1;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #1a237e;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #e3f2fd;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mumbai – The City of Dreams</h1>
+  <p>India’s Financial Capital & Bollywood’s Heartbeat</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Mumbai</strong>, formerly Bombay, is a fast-paced metropolis on the west coast of India. It’s home to Bollywood, art deco architecture, seaside promenades, and a rich colonial past. A city of contrasts, Mumbai thrives with its blend of tradition and modernity.</p>
+  </div>
+
+  <h2>📅 Best Time to Visit</h2>
+  <p>The ideal time to visit Mumbai is from <strong>November to February</strong>. Pleasant weather makes it perfect for sightseeing. <strong>Monsoons</strong> (June to September) are romantic but often rainy. <strong>Summers</strong> (March to May) are hot and humid.</p>
+
+  <h2>📍 Top Things to Do</h2>
+  <ul>
+    <li><strong>Gateway of India:</strong> Historic arch monument by the sea</li>
+    <li><strong>Elephanta Caves:</strong> Rock-cut temples accessible by ferry</li>
+    <li><strong>Marine Drive:</strong> Iconic seafront perfect for sunsets</li>
+    <li><strong>Chhatrapati Shivaji Terminus:</strong> UNESCO World Heritage railway station</li>
+    <li><strong>Colaba & Crawford Market:</strong> Local shopping and street food</li>
+    <li><strong>Haji Ali Dargah:</strong> Sea-based mosque with spiritual vibes</li>
+    <li><strong>Bollywood Tour:</strong> Experience India's film industry first-hand</li>
+    <li><strong>Siddhivinayak Temple:</strong> Famous temple of Lord Ganesha</li>
+  </ul>
+
+  <h2>🚗 How to Reach</h2>
+  <ul>
+    <li><strong>By Air:</strong> Chhatrapati Shivaji Maharaj International Airport (BOM)</li>
+    <li><strong>By Train:</strong> CST, Mumbai Central and Bandra Terminus connect nationwide</li>
+    <li><strong>By Road:</strong> Connected via NH48 and NH160</li>
+    <li><strong>By Water:</strong> Ferries from Gateway of India to Alibaug and Elephanta</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

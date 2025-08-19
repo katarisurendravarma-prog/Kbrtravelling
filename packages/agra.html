@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agra | KBR Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(to bottom, #fff8f0, #ffe6e6);
+      color: #2e2e2e;
+    }
+
+    header {
+      background: linear-gradient(to right, #b71c1c, #e53935);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInScale 2s ease forwards;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #b71c1c;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    h3, h4 {
+      color: #880e4f;
+      margin-top: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      background: #ffebee;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(244, 67, 54, 0.1);
+    }
+
+    .book-button {
+      display: block;
+      width: max-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      background-color: #e53935;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .book-button:hover {
+      background-color: #b71c1c;
+    }
+
+    footer {
+      background: #b71c1c;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Agra – The City of Eternal Love</h1>
+  <p>Home to the magnificent Taj Mahal and Mughal grandeur</p>
+</header>
+
+<section class="fade-up">
+  <div class="highlight">
+    <p><strong>Agra</strong> is synonymous with the <strong>Taj Mahal</strong> — a symbol of love and a UNESCO World Heritage Site. Alongside, discover Mughal-era forts, tombs, and cultural stories that resonate through sandstone and marble.</p>
+  </div>
+
+  <a href="payment.html" class="book-button">Book Now</a>
+
+  <h2>📅 Tour Overview</h2>
+  <p><strong>Destinations:</strong> Delhi – Agra – Jaipur<br>
+     <strong>Duration:</strong> 6 Days / 5 Nights<br>
+     <strong>Best Time to Visit:</strong> September to April</p>
+
+  <h2>🌟 Highlights</h2>
+  <ul>
+    <li><strong>Delhi:</strong> Jama Masjid, India Gate, Rajghat, Humayun’s Tomb</li>
+    <li><strong>Agra:</strong> Taj Mahal, Agra Fort, Fatehpur Sikri</li>
+    <li><strong>Jaipur:</strong> Amber Fort, City Palace, Jantar Mantar, Hawa Mahal</li>
+  </ul>
+
+  <h2>🗓️ Day-wise Itinerary</h2>
+
+  <h4>Day 1: Arrival in Delhi</h4>
+  <p>Pickup and transfer to hotel. Leisure day.</p>
+
+  <h4>Day 2: Delhi Sightseeing</h4>
+  <p>Explore Old and New Delhi: Jama Masjid, Chandni Chowk, Qutub Minar, India Gate, and more.</p>
+
+  <h4>Day 3: Drive to Jaipur</h4>
+  <p>Travel to the Pink City. Check in and relax.</p>
+
+  <h4>Day 4: Jaipur City Tour</h4>
+  <p>Visit Amber Fort, City Palace, Hawa Mahal and enjoy colorful local bazaars.</p>
+
+  <h4>Day 5: Jaipur to Agra via Fatehpur Sikri</h4>
+  <p>Explore Fatehpur Sikri and reach Agra. Evening at leisure.</p>
+
+  <h4>Day 6: Taj Mahal Visit & Return to Delhi</h4>
+  <p>Sunrise view of Taj Mahal, then Agra Fort. Drive back to Delhi for departure.</p>
+
+  <p style="text-align:center; font-style: italic; color: #777; margin-top: 30px;">End of the Golden Triangle Tour</p>
+</section>
+
+<footer>
+  © 2025 KBR Travel | Crafted with love for the explorers of India 🇮🇳
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
