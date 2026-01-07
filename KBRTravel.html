@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KBR Travel | Explore India</title>
+
+
+
+  <style>
+    :root {
+      --accent: #ff5e62;
+      --gradient: linear-gradient(135deg, #ff9966, #f73e41);
+      --glass: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .navlinks {
+      display: flex;
+      list-style: none;
+    }
+
+    .navlinks li {
+      margin-left: 30px;
+    }
+
+    .navlinks a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .navlinks a::after {
+      content: "";
+      position: relative;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background: var(--accent);
+      transition: 0.4s;
+    }
+
+    .navlinks a:hover::after {
+      width: 100%;
+    }
+
+    .regesterbutton {
+      background: var(--gradient);
+      padding: 8px 20px;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .regesterbutton:hover {
+      transform: scale(1.1);
+    }
+
+    header {
+      background-image:url(nat.jpg);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 70px;
+      position: relative;
+      
+    }
+    
+    header::after {
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      
+    }
+
+    header h1 {
+
+      position: relative;
+      font-size: 3.2rem;
+      color: #fff;
+      z-index: 2;
+      
+    }
+   
+
+    .section-title {
+      font-size: 2.2rem;
+      margin: 70px auto 30px;
+      text-align: center;
+      position: relative;
+      color: #333;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .container{
+      padding: 0 7%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+     
+    }
+
+    .card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 1.2rem;
+    }
+
+    .cta {
+      background-image: linear-gradient(to right,#3f2321,transparent),url(room.jpg);
+      background-size: cover;
+      padding: 5%;
+      text-align: center;
+      color: white;
+      margin: 80px 7%;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+    }
+
+    .cta p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      margin-top: 20px;
+      display: inline-block;
+      background: white;
+      color: #ff5e62;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .cta a:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: var(--accent);
+    }
+    .stories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-gap: 10px;
+    margin-bottom: 30px;
+   
+}
+.stories div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.stories div{
+    text-align: center;
+}
+.stories p{
+    text-align: left;
+}
+.stories h1{
+    text-align: left;
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.about, .links, .contact {
+    max-width: 300px;
+}
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+.links ul li {
+    margin: 5px 0;
+}
+.links ul li a {
+    color: white;
+    text-decoration: none;
+}
+.query-btn {
+    background-color: #5a6f54;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.query-btn:hover {
+    background-color: #6f8f6a;
+}
+.social-icons {
+      margin-top: 15px;
+    }
+
+.social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+.social-icons a:hover {
+      transform: scale(1.3);
+      color: var(--accent);
+    }
+.btn {
+      padding: 12px 25px;
+      margin: 10px 104px;
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      left:35%;
+    }
+ #moreDestinations, #morePackages {
+      display: none;
+      
+    }
+  @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+.grid1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+     
+    }
+.video{
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">KBR Travel Plans</div>
+    <ul class="navlinks">
+      <li><a href="destination/destination.html">Destinations</a></li>
+      <li><a href="packages/packages.html">Packages</a></li>
+      <li><a href="trains/trains.html">Luxury Trains in india</a></li>
+      <li><a href="hotels/hotel.html">Luxury Hotels</a></li>
+      <li><a href="festival/festival.html">Festival Tour</a></li>
+    </ul>
+    <a href="login.html" class="regesterbutton">Register</a>
+  </nav>
+
+  <header>
+    
+    <h1>Discover India Like Never Before</h1>
+    
+  </header>
+<div class="container">
+  <section id="destinations">
+    <h2 class="section-title">Top Destinations</h2>
+<div class="grid">
+  <div class="card">
+    <a href="destination/goa.html"><img src="destination/Goa.jpg" alt="Goa"></a>
+    <h3>Goa</h3>
+  </div>
+  <div class="card">
+    <a href="destination/leh.html"><img src="destination/Leh.jpg" alt="Leh"></a>
+    <h3>Leh</h3>
+  </div>
+  <div class="card">
+    <a href="destination/mumbai.html"><img src="destination/Mumbai.jpg" alt="Mumbai"></a>
+    <h3>Mumbai</h3>
+  </div>
+  <div class="card">
+    <a href="destination/varanasi.html"><img src="destination/varanasi.jpg" alt="Varanasi"></a>
+    <h3>Varanasi</h3>
+  </div>
+</div>
+
+<!-- Hidden Cards -->
+<div class="grid1" id="moreDestinations">
+  <div class="card">
+    <a href="destination/chhattisgarh.html"><img src="destination/chhattisgarh.jpg" alt="chhattisgarh"></a>
+    <h3>chhattisgarh</h3>
+  </div>
+  <div class="card">
+    <a href="destination/JAISALMER.html"><img src="destination/Jaisalmer.jpg" alt="JAISALMER"></a>
+    <h3>Jaisalmer</h3>
+  </div>
+  <div class="card">
+    <a href="destination/kalimpong.html"><img src="destination/Kalimpong.jpg" alt="Kalimpong"></a>
+    <h3>kalimpong</h3>
+  </div>
+  <div class="card">
+    <a href="destination/Khajuraho.html"><img src="destination/Khajuraho.jpg" alt="Khajuraho"></a>
+    <h3>Khajuraho</h3>
+  </div>
+  <div class="card">
+    <a href="destination/mahabalipuram.html"><img src="destination/Mahabalipuram.png" alt="Mahabalipuram"></a>
+    <h3>Mahabalipuram</h3>
+  </div>
+  <div class="card">
+    <a href="destination/Mandawa.html"><img src="destination/Mandawa.jpg" alt="Mandawa"></a>
+    <h3>Mandawa</h3>
+  </div>
+  <div class="card">
+    <a href="destination/mumbai.html"><img src="destination/Mumbai.jpg" alt="mumbai"></a>
+    <h3>Mumbai</h3>
+  </div>
+  <div class="card">
+    <a href="destination/nubra.html"><img src="destination/Nubra.jpg" alt="nubra"></a>
+    <h3>Nubra</h3>
+  </div>
+  <div class="card">
+    <a href="destination/orchha.html"><img src="destination/orchha.jpg" alt="orchha"></a>
+    <h3>Orchha</h3>
+  </div>
+  <div class="card">
+    <a href="destination/pangonga.html"><img src="destination/Pangong.jpg" alt="pangonga"></a>
+    <h3>pangonga</h3>
+  </div>
+  <div class="card">
+    <a href="destination/pelling.html"><img src="destination/Pelling.png" alt="pelling"></a>
+    <h3>Pelling</h3>
+  </div>
+  <div class="card">
+    <a href="destination/periyar.html"><img src="destination/Periyar.png" alt="periyar"></a>
+    <h3>Periyar</h3>
+  </div>
+  <div class="card">
+    <a href="destination/alleppey.html"><img src="destination/Alleppey.png" alt="alleppey"></a>
+    <h3>Alleppey</h3>
+  </div>
+
+</div>
+
+<!-- View All Button -->
+<button class="btn" id="destBtn" onclick="showMore('moreDestinations','destBtn')">View All</button>
+
+  </section>
+
+  <section id="packages">
+    <h2 class="section-title">OUR PACKAGES</h2>
+    <div class="grid">
+      <div class="card" >
+        <a href="packages/agra.html"><img src="packages/Agra.jpg" alt="Agra"></a>
+        <h3>Agra Heritage Tour</h3>
+      </div>
+      <div class="card" >
+        <a href="packages/goa.html"><img src="packages/Goa.jpg" alt="Goa"></a>
+        <h3>Beachside Bliss</h3>
+      </div>
+      <div class="card" >
+        <a href="packages/kerala.html"><img src="packages/Kerala.jpg" alt="Kerala"></a>
+        <h3>Backwater Escape</h3>
+      </div>
+      <div class="card" >
+        <a href="packages/ladakh.html"><img src="packages/Ladakh.jpg" alt="Ladakh"></a>
+        <h3>Mountain Magic</h3>
+      </div>
+    </div>
+
+<!-- Hidden Cards -->
+<div class="grid1" id="morePackages">
+  <div class="card">
+    <a href="packages/varanasi.html"><img src="packages/Varanasi.jpg" alt="Golden Varanasi"></a>
+    <h3>Golden Varanasi</h3>
+  </div>
+  <div class="card">
+    <a href="packages/amrisar.html"><img src="packages/Amritsar.jpg" alt="Amritsar"></a>
+    <h3>Amritsar</h3>
+  </div>
+  <div class="card">
+    <a href="packages/assam.html"><img src="packages/Assam.jpg" alt="Assam"></a>
+    <h3>Assam</h3>
+  </div>
+  <div class="card">
+    <a href="packages/chardham.html"><img src="packages/Chardham.webp" alt="chardham"></a>
+    <h3>Chardham</h3>
+  </div>
+  <div class="card">
+    <a href="packages/darjelling.html"><img src="packages/Darjeeling.jpg" alt="Darjeeling"></a>
+    <h3>Darjeeling</h3>
+  </div>
+  <div class="card">
+    <a href="packages/garhwal.html"><img src="packages/Garhwal.jpg" alt="Garhwal"></a>
+    <h3>Garhwal</h3>
+  </div>
+  <div class="card">
+    <a href="packages/himachal.html"><img src="packages/Himachal.jpg" alt="Himachal"></a>
+    <h3>Himachal</h3>
+  </div>
+  <div class="card">
+    <a href="packages/karnataka.html"><img src="packages/karnataka.jpg" alt="Karnataka"></a>
+    <h3>Karnataka</h3>
+  </div>
+  <div class="card">
+    <a href="packages/orissa.html"><img src="packages/Orissa.jpg" alt="Orissa"></a>
+    <h3>Orissa</h3>
+  </div>
+  <div class="card">
+    <a href="packages/rajasthan.html"><img src="packages/Rajasthan.jpg" alt="Rajasthan"></a>
+    <h3>Rajasthan</h3>
+  </div>
+  <div class="card">
+    <a href="packages/shimla.html"><img src="packages/Shimla.jpg" alt="Shimla"></a>
+    <h3>Shimla</h3>
+  </div>
+  <div class="card">
+    <a href="packages/srinagar.html"><img src="packages/Srinagar.jpg" alt="Srinagar"></a>
+    <h3>Srinagar</h3>
+  </div>
+</div>
+
+<!-- View All Button --><button class="btn" id="packBtn" onclick="showMore('morePackages','packBtn')">View All</button>
+  </section>
+
+  <section class="cta" >
+    <h2>To be your best,explore! </h2>
+    <p>Great oppotunity to make by sharing your extra splace.</p>
+    <a href="#">Explore Packages</a>
+  </section>
+  <h1 class="section-title">TRAVELLERS STORIES</h1>
+    <div class="stories">
+        <div>
+            <img src="stories/Things-to-do-in-Varanasi.webp">
+            <h1 style="color:#800000; font-family:'Georgia', serif; text-align:center;">
+  Things to Do in Varanasi –<br> 
+  Your Guide to India’s Spiritual Heart
+</h1>
+
+<p style="font-size:16px; color:#333; line-height:1.8; font-family:'Verdana', sans-serif;">
+  Welcome to <b style="color:#6A5ACD;">Varanasi</b>, one of the world’s oldest cities, also known as <b>Kashi</b> or <b>Banaras</b>. 
+  Nestled along the sacred <span style="color:#2E8B57;">Ganges River</span>, Varanasi is India’s spiritual and cultural soul.
+</p>
+
+<p style="font-size:16px; color:#333; line-height:1.8; font-family:'Verdana', sans-serif;">
+  <b>Why visit Varanasi?</b> Because it’s not just a place – it’s a <span style="color:#DC143C;">life-changing experience</span>. 
+  From sunrise rituals at the ghats to ancient temples and local traditions, every corner of this city tells a story.
+</p>
+
+        </div>
+        <div>
+            <img src="stories/Andaman-Tour-places.webp">
+            <h1 style="color:#0E5E6F; font-family:'Georgia', serif; text-align:center;">
+  Top 10 Andaman Tour <br>Places You Must Visit in<br> 2024 – 25
+</h1>
+
+<p style="font-size:16px; color:#333; font-family:'Verdana', sans-serif'; line-height:1.8;">
+  The <span style="'Courier New', Courier, monospacecolor:#1E90FF;"><b>Andaman Islands</b></span>, located in the beautiful <b>Bay of Bengal</b>, are a perfect tropical getaway.
+  Known for <span style="color:#228B22;">clear blue waters</span>, <span style="color:#FFD700;">white-sand beaches</span>, and a touch of <b>colonial history</b>, they offer the best mix of peace and adventure.
+</p>
+
+<p style="font-size:16px; color:#333; font-family:'Verdana', sans-serif'; line-height:1.8;">
+  From <b>snorkeling in coral reefs</b> to exploring <b>historic landmarks</b> and relaxing on <b>sun-kissed shores</b>, the Andaman tour is packed with unforgettable spots.
+</p>
+
+        </div>
+        <div>
+            <img src="stories/Best-Places-to-visit-Ayodhya.webp">
+           <h1 style="color:#8B0000; font-family:'Georgia', serif; text-align:center;">
+  Best Places to Visit in<br> Ayodhya:<br> Discover the Sacred City with Our <br>Exclusive Ayodhya Tour Package
+</h1>
+
+<p style="font-size:16px; color:#333; font-family:'Verdana', sans-serif'; line-height:1.8;">
+  <b>Ayodhya</b>, an ancient city filled with legends and spirituality, is one of India’s most important religious destinations.
+  Believed to be the <span style="color:#DAA520;"><b>birthplace of Lord Rama</b></span>, the city attracts millions of pilgrims each year.
+</p>
+
+<p style="font-size:16px; color:#333; font-family:'Verdana', sans-serif'; line-height:1.8;">
+  Located on the banks of the <b>Sarayu River</b>, Ayodhya is home to sacred temples, holy ghats, and cultural landmarks that reflect the rich heritage of Hinduism.
+</p>
+
+        </div>
+        </div>
+</div>
+  <footer>
+            <div class="footer-container">
+                <div class="about">
+                    <p>“KBRTravelPlans.com <hr>is a gateway of information and services for travelers who want to get to know India a little bit better.”</p>
+                </div>
+                <div class="links">
+                    <h3>Useful Links<hr></h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="discl.html">Disclaimer</a></li>
+                        <li><a href="#">Network Website</a></li>
+                        <li><a href="Doubts.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h3>Contact<hr></h3>
+                    <p>
+                        📍 Karnataka,India <br>
+                        ✉ KBRTRAVELPLANS@kbrtravelplans.com
+                    </p>
+                    <a href="Doubts.html"><button class="query-btn">Send Query</button></a>
+                </div>
+            </div>
+            <div class="social-icons">
+                 <a href="#"><i class="fab fa-facebook"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+                 <a href="#"><i class="fab fa-youtube"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <br><br><hr><br><p>© 2025 KBR Travel Plans. All Rights Reserved.</p>
+             
+
+        </footer>
+        <script>
+    function showMore(sectionId, buttonId) {
+      document.getElementById(sectionId).style.display = "grid";
+      document.getElementById(buttonId).style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
