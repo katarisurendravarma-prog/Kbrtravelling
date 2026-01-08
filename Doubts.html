@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ask Your Doubts | KBR Travel</title>
   <style>
     body {
@@ -18,15 +19,20 @@
     }
 
     @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     .form-container {
       background: #fff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       width: 100%;
       max-width: 500px;
       animation: slideUp 1s ease-out;
@@ -37,6 +43,7 @@
         opacity: 0;
         transform: translateY(40px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -58,7 +65,8 @@
       animation: fadeIn 1.3s ease;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 20px;
@@ -70,7 +78,8 @@
       animation: fadeIn 1.4s ease;
     }
 
-    input:focus, textarea:focus {
+    input:focus,
+    textarea:focus {
       border-color: #ff5e62;
     }
 
@@ -101,11 +110,17 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="form-container">
@@ -123,25 +138,48 @@
   </div>
 
   <script>
-    function handleSubmit() {
+    async function handleSubmit() {
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
+      const successMsg = document.getElementById("success");
 
       if (!email || !message) {
         alert("Please fill out both fields.");
         return false;
       }
 
-      document.getElementById("success").style.display = "block";
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, message })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          successMsg.textContent = "✅ Your question has been submitted and sent to our team!";
+          successMsg.style.display = "block";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+        } else {
+          alert("❌ Error: " + data.message);
+        }
+      } catch (error) {
+        console.error('Fetch Error:', error);
+        alert("❌ Failed to connect to server. Check if the backend is running. Error: " + error.message);
+      }
+
       setTimeout(() => {
-        document.getElementById("success").style.display = "none";
+        successMsg.style.display = "none";
       }, 4000);
 
-      document.getElementById("email").value = "";
-      document.getElementById("message").value = "";
       return false; // Prevent actual form submission
     }
   </script>
 
 </body>
+
 </html>

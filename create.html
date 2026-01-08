@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Account | KBR Travel</title>
-  
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
     body {
       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
       height: 100vh;
@@ -14,34 +21,73 @@
       align-items: center;
       justify-content: center;
     }
+
     .container {
       background: rgba(255, 255, 255, 0.95);
       padding: 2.5rem;
       border-radius: 1px;
       width: 90%;
       max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       animation: fadeIn 1s ease-in-out;
     }
-    h2 { text-align: center; color: #457b9d; margin-bottom: 1rem; }
-    label { font-weight: 600; margin-bottom: 0.5rem; display: block; }
-    input {
-      width: 100%; padding: 10px; border-radius: 5px;
-      border: 1px solid #ccc; margin-bottom: 1rem;
+
+    h2 {
+      text-align: center;
+      color: #457b9d;
+      margin-bottom: 1rem;
     }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+
     button {
       background: linear-gradient(to right, #43cea2, #185a9d);
-      color: white; border: none; padding: 12px; width: 100%;
-      border-radius: 6px; cursor: pointer; font-weight: bold;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
     }
-    .extra-links { text-align: center; margin-top: 1rem; }
-    a { color: #185a9d; text-decoration: none; font-weight: bold; }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: #185a9d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container" data-aos="fade-up">
     <h2>Create Account</h2>
@@ -70,6 +116,46 @@
   </div>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    document.querySelector('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name, email, phone, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("✅ Account created successfully! Please login.");
+          window.location.href = 'login.html';
+        } else {
+          alert("❌ Error: " + data.message);
+        }
+      } catch (error) {
+        console.error('Fetch Error:', error);
+        alert("❌ Failed to connect to server. Error: " + error.message);
+      }
+    });
+  </script>
 </body>
+
 </html>

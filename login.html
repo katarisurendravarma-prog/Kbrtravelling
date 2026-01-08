@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | KBR Travel</title>
- 
+
   <style>
     * {
       margin: 0;
@@ -27,7 +28,7 @@
       border-radius: 12px;
       width: 90%;
       max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
       animation: fadeIn 1s ease forwards;
     }
 
@@ -104,11 +105,19 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="login-container" data-aos="zoom-in">
@@ -153,9 +162,32 @@
         return false;
       }
 
-      alert("✅ Logged in successfully!");
+      fetch('http://127.0.0.1:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.token) {
+            localStorage.setItem('kbr_token', data.token);
+            localStorage.setItem('kbr_user', JSON.stringify(data.user));
+            alert("✅ Logged in successfully!");
+            window.location.href = 'KBRTravel.html';
+          } else {
+            alert("❌ Login failed: " + data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Fetch Error:', error);
+          alert("❌ Failed to connect to server. Error: " + error.message);
+        });
+
       return false;
     }
   </script>
 </body>
+
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Payment Sheet | KBR Travel</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -26,7 +27,7 @@
       background: white;
       border-radius: 10px;
       padding: 2rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
@@ -45,7 +46,9 @@
       font-weight: 600;
     }
 
-    input, textarea, select {
+    input,
+    textarea,
+    select {
       width: 100%;
       padding: 10px;
       border-radius: 6px;
@@ -55,7 +58,9 @@
       font-size: 1rem;
     }
 
-    input:focus, textarea:focus, select:focus {
+    input:focus,
+    textarea:focus,
+    select:focus {
       border-color: #ff5e62;
     }
 
@@ -126,6 +131,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="container" data-aos="fade-up">
@@ -213,7 +219,7 @@
     }
 
     // Submit form
-    function submitForm() {
+    async function submitForm() {
       const name = document.getElementById("name").value.trim();
       const address = document.getElementById("address").value.trim();
       const phone = document.getElementById("phone").value.trim();
@@ -221,16 +227,62 @@
       const travelType = document.getElementById("travelType").value;
       const amount = document.getElementById("amount").value.trim();
       const upi = document.getElementById("upi").value.trim();
+      const doubt = document.getElementById("doubt").value.trim();
+      const place = document.getElementById("place").value;
 
       if (!name || !address || !phone || !age || !upi || !travelType || !amount || amount <= 0) {
         alert("⚠️ Please fill all required fields correctly before submitting.");
         return false;
       }
 
-      alert("✅ Payment submitted successfully!\nThank you for booking with KBR Travel.");
-      document.getElementById("paymentForm").reset();
-      return true;
+      // Check if logged in
+      const userStr = localStorage.getItem('kbr_user');
+      if (!userStr) {
+        alert("⚠️ Please login first to make a booking.");
+        window.location.href = '../login.html';
+        return false;
+      }
+      const user = JSON.parse(userStr);
+
+      const bookingData = {
+        userEmail: user.email,
+        place,
+        name,
+        address,
+        phone,
+        age,
+        travelType,
+        amount,
+        upiId: upi,
+        doubts: doubt
+      };
+
+      try {
+        const response = await fetch('http://127.0.0.1:5000/api/bookings', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(bookingData)
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("✅ Payment submitted successfully!\nThank you for booking with KBR Travel.");
+          document.getElementById("paymentForm").reset();
+          return true;
+        } else {
+          alert("❌ Error: " + data.message);
+          return false;
+        }
+      } catch (error) {
+        console.error('Fetch Error:', error);
+        alert("❌ Failed to connect to server. Error: " + error.message);
+        return false;
+      }
     }
   </script>
 </body>
+
 </html>
